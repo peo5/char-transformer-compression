@@ -1,0 +1,13 @@
+{
+ "model": "runs/pt_0.1M.pt",
+ "text": "data/pt/test.txt",
+ "chars": 1000000,
+ "streams": 512,
+ "round_trip_ok": true,
+ "file_bytes": 298837,
+ "header_bytes": 2056,
+ "real_bpc": 2.390696,
+ "ideal_bpc": 2.3718821694489867,
+ "encode_seconds": 123.31479668617249,
+ "decode_seconds": 130.75697660446167
+}

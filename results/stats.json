@@ -1,0 +1,47 @@
+{
+ "pt": {
+  "articles": 1112246,
+  "short": 813669,
+  "duplicate": 12,
+  "kept": 298565,
+  "kept_chars": 1998485840,
+  "test": {
+   "chars": 10000000,
+   "articles": 1449
+  },
+  "val": {
+   "chars": 5000000,
+   "articles": 778
+  },
+  "train": {
+   "chars": 400000000,
+   "articles": 59490
+  }
+ },
+ "en": {
+  "articles": 937729,
+  "short": 514174,
+  "duplicate": 2,
+  "kept": 423553,
+  "kept_chars": 2955279103,
+  "test": {
+   "chars": 10000000,
+   "articles": 1521
+  },
+  "val": {
+   "chars": 5000000,
+   "articles": 748
+  },
+  "train": {
+   "chars": 400000000,
+   "articles": 57191
+  }
+ },
+ "recipe": {
+  "alphabet": "abcdefghijklmnopqrstuvwxyz0123456789 \n.,;:!?'\"-()",
+  "min_chars": 2000,
+  "test_chars": 10000000,
+  "val_chars": 5000000,
+  "max_train_chars": 400000000
+ }
+}

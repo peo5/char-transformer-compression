@@ -1,0 +1,50 @@
+{
+ "en_0.1M": {
+  "params": 122801,
+  "weights_bits": 3929632,
+  "shared": 2.4287538528442383,
+  "two_part_test": 2.8217220828375824,
+  "two_part_train": 2.43510767993181,
+  "prequential": 2.599759588997829
+ },
+ "en_10M": {
+  "params": 9977649,
+  "weights_bits": 319284768,
+  "shared": 1.5588783025741577,
+  "two_part_test": 33.48776379230843,
+  "two_part_train": 2.363102099464638,
+  "prequential": 1.736780312485725
+ },
+ "en_1M": {
+  "params": 1036977,
+  "weights_bits": 33183264,
+  "shared": 1.8497552871704102,
+  "two_part_test": 5.1681241622920115,
+  "two_part_train": 1.9523684914479575,
+  "prequential": 2.0165785564205967
+ },
+ "pt_0.1M": {
+  "params": 122801,
+  "weights_bits": 3929632,
+  "shared": 2.369521379470825,
+  "two_part_test": 2.7624896094641693,
+  "two_part_train": 2.4153307106733224,
+  "prequential": 2.522490713523492
+ },
+ "pt_10M": {
+  "params": 9977649,
+  "weights_bits": 319284768,
+  "shared": 1.5226950645446777,
+  "two_part_test": 33.45158055427895,
+  "two_part_train": 2.326843832722105,
+  "prequential": 1.6779953346670802
+ },
+ "pt_1M": {
+  "params": 1036977,
+  "weights_bits": 33183264,
+  "shared": 1.799422025680542,
+  "two_part_test": 5.117790900802143,
+  "two_part_train": 1.8982418951118993,
+  "prequential": 1.9694047061975322
+ }
+}

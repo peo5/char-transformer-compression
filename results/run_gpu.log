@@ -1,0 +1,919 @@
+pt 0.1M: 122801 parameters, 24414 steps, 399998976 chars
+step 200 chars 3276800 train 4.1799 bpc lr 1.20e-03 3s
+step 400 chars 6553600 train 3.4947 bpc lr 2.40e-03 5s
+step 600 chars 9830400 train 3.4549 bpc lr 3.00e-03 7s
+step 800 chars 13107200 train 3.3935 bpc lr 2.99e-03 10s
+step 1000 chars 16384000 train 3.2118 bpc lr 2.99e-03 12s
+step 1200 chars 19660800 train 3.0313 bpc lr 2.98e-03 14s
+step 1400 chars 22937600 train 2.9203 bpc lr 2.98e-03 17s
+step 1600 chars 26214400 train 2.8485 bpc lr 2.97e-03 19s
+step 1800 chars 29491200 train 2.7972 bpc lr 2.96e-03 21s
+step 2000 chars 32768000 train 2.7539 bpc lr 2.95e-03 24s
+step 2000 val 2.7488 bpc
+step 2200 chars 36044800 train 2.7245 bpc lr 2.94e-03 26s
+step 2400 chars 39321600 train 2.7008 bpc lr 2.93e-03 28s
+step 2600 chars 42598400 train 2.6805 bpc lr 2.92e-03 30s
+step 2800 chars 45875200 train 2.6624 bpc lr 2.90e-03 32s
+step 3000 chars 49152000 train 2.6523 bpc lr 2.89e-03 35s
+step 3200 chars 52428800 train 2.6316 bpc lr 2.87e-03 37s
+step 3400 chars 55705600 train 2.6306 bpc lr 2.86e-03 39s
+step 3600 chars 58982400 train 2.6138 bpc lr 2.84e-03 41s
+step 3800 chars 62259200 train 2.6074 bpc lr 2.82e-03 43s
+step 4000 chars 65536000 train 2.5969 bpc lr 2.81e-03 45s
+step 4000 val 2.6135 bpc
+step 4200 chars 68812800 train 2.5878 bpc lr 2.79e-03 48s
+step 4400 chars 72089600 train 2.5823 bpc lr 2.77e-03 50s
+step 4600 chars 75366400 train 2.5725 bpc lr 2.74e-03 52s
+step 4800 chars 78643200 train 2.5747 bpc lr 2.72e-03 55s
+step 5000 chars 81920000 train 2.5578 bpc lr 2.70e-03 57s
+step 5200 chars 85196800 train 2.5568 bpc lr 2.68e-03 59s
+step 5400 chars 88473600 train 2.5537 bpc lr 2.65e-03 62s
+step 5600 chars 91750400 train 2.5484 bpc lr 2.63e-03 64s
+step 5800 chars 95027200 train 2.5547 bpc lr 2.60e-03 66s
+step 6000 chars 98304000 train 2.5340 bpc lr 2.57e-03 69s
+step 6000 val 2.5711 bpc
+step 6200 chars 101580800 train 2.5309 bpc lr 2.55e-03 71s
+step 6400 chars 104857600 train 2.5383 bpc lr 2.52e-03 74s
+step 6600 chars 108134400 train 2.5235 bpc lr 2.49e-03 76s
+step 6800 chars 111411200 train 2.5247 bpc lr 2.46e-03 78s
+step 7000 chars 114688000 train 2.5178 bpc lr 2.43e-03 81s
+step 7200 chars 117964800 train 2.5208 bpc lr 2.40e-03 83s
+step 7400 chars 121241600 train 2.5178 bpc lr 2.37e-03 85s
+step 7600 chars 124518400 train 2.5145 bpc lr 2.34e-03 88s
+step 7800 chars 127795200 train 2.5073 bpc lr 2.31e-03 90s
+step 8000 chars 131072000 train 2.5068 bpc lr 2.27e-03 92s
+step 8000 val 2.5288 bpc
+step 8200 chars 134348800 train 2.5058 bpc lr 2.24e-03 95s
+step 8400 chars 137625600 train 2.4989 bpc lr 2.21e-03 97s
+step 8600 chars 140902400 train 2.4949 bpc lr 2.17e-03 99s
+step 8800 chars 144179200 train 2.4964 bpc lr 2.14e-03 102s
+step 9000 chars 147456000 train 2.4972 bpc lr 2.10e-03 104s
+step 9200 chars 150732800 train 2.4891 bpc lr 2.07e-03 106s
+step 9400 chars 154009600 train 2.4895 bpc lr 2.03e-03 109s
+step 9600 chars 157286400 train 2.4858 bpc lr 1.99e-03 111s
+step 9800 chars 160563200 train 2.4810 bpc lr 1.96e-03 113s
+step 10000 chars 163840000 train 2.4806 bpc lr 1.92e-03 116s
+step 10000 val 2.5072 bpc
+step 10200 chars 167116800 train 2.4811 bpc lr 1.88e-03 118s
+step 10400 chars 170393600 train 2.4736 bpc lr 1.85e-03 121s
+step 10600 chars 173670400 train 2.4727 bpc lr 1.81e-03 123s
+step 10800 chars 176947200 train 2.4661 bpc lr 1.77e-03 125s
+step 11000 chars 180224000 train 2.4691 bpc lr 1.73e-03 128s
+step 11200 chars 183500800 train 2.4683 bpc lr 1.69e-03 130s
+step 11400 chars 186777600 train 2.4631 bpc lr 1.66e-03 132s
+step 11600 chars 190054400 train 2.4630 bpc lr 1.62e-03 135s
+step 11800 chars 193331200 train 2.4544 bpc lr 1.58e-03 137s
+step 12000 chars 196608000 train 2.4599 bpc lr 1.54e-03 139s
+step 12000 val 2.4828 bpc
+step 12200 chars 199884800 train 2.4616 bpc lr 1.50e-03 142s
+step 12400 chars 203161600 train 2.4514 bpc lr 1.46e-03 144s
+step 12600 chars 206438400 train 2.4548 bpc lr 1.42e-03 147s
+step 12800 chars 209715200 train 2.4527 bpc lr 1.39e-03 149s
+step 13000 chars 212992000 train 2.4561 bpc lr 1.35e-03 151s
+step 13200 chars 216268800 train 2.4494 bpc lr 1.31e-03 154s
+step 13400 chars 219545600 train 2.4476 bpc lr 1.27e-03 156s
+step 13600 chars 222822400 train 2.4410 bpc lr 1.23e-03 158s
+step 13800 chars 226099200 train 2.4426 bpc lr 1.19e-03 161s
+step 14000 chars 229376000 train 2.4334 bpc lr 1.16e-03 163s
+step 14000 val 2.4663 bpc
+step 14200 chars 232652800 train 2.4320 bpc lr 1.12e-03 165s
+step 14400 chars 235929600 train 2.4368 bpc lr 1.08e-03 168s
+step 14600 chars 239206400 train 2.4382 bpc lr 1.05e-03 170s
+step 14800 chars 242483200 train 2.4312 bpc lr 1.01e-03 172s
+step 15000 chars 245760000 train 2.4265 bpc lr 9.73e-04 175s
+step 15200 chars 249036800 train 2.4243 bpc lr 9.37e-04 177s
+step 15400 chars 252313600 train 2.4171 bpc lr 9.01e-04 179s
+step 15600 chars 255590400 train 2.4173 bpc lr 8.66e-04 182s
+step 15800 chars 258867200 train 2.4127 bpc lr 8.31e-04 184s
+step 16000 chars 262144000 train 2.4082 bpc lr 7.97e-04 187s
+step 16000 val 2.4417 bpc
+step 16200 chars 265420800 train 2.4177 bpc lr 7.63e-04 189s
+step 16400 chars 268697600 train 2.4048 bpc lr 7.30e-04 191s
+step 16600 chars 271974400 train 2.4092 bpc lr 6.97e-04 194s
+step 16800 chars 275251200 train 2.4066 bpc lr 6.64e-04 196s
+step 17000 chars 278528000 train 2.4036 bpc lr 6.33e-04 198s
+step 17200 chars 281804800 train 2.4032 bpc lr 6.01e-04 201s
+step 17400 chars 285081600 train 2.4084 bpc lr 5.71e-04 203s
+step 17600 chars 288358400 train 2.4051 bpc lr 5.41e-04 205s
+step 17800 chars 291635200 train 2.3989 bpc lr 5.11e-04 208s
+step 18000 chars 294912000 train 2.3937 bpc lr 4.83e-04 210s
+step 18000 val 2.4257 bpc
+step 18200 chars 298188800 train 2.3946 bpc lr 4.55e-04 213s
+step 18400 chars 301465600 train 2.3934 bpc lr 4.27e-04 215s
+step 18600 chars 304742400 train 2.3967 bpc lr 4.01e-04 217s
+step 18800 chars 308019200 train 2.3940 bpc lr 3.75e-04 220s
+step 19000 chars 311296000 train 2.3883 bpc lr 3.50e-04 222s
+step 19200 chars 314572800 train 2.3875 bpc lr 3.25e-04 224s
+step 19400 chars 317849600 train 2.3870 bpc lr 3.02e-04 227s
+step 19600 chars 321126400 train 2.3855 bpc lr 2.79e-04 229s
+step 19800 chars 324403200 train 2.3766 bpc lr 2.57e-04 231s
+step 20000 chars 327680000 train 2.3775 bpc lr 2.36e-04 234s
+step 20000 val 2.4088 bpc
+step 20200 chars 330956800 train 2.3774 bpc lr 2.15e-04 236s
+step 20400 chars 334233600 train 2.3753 bpc lr 1.96e-04 239s
+step 20600 chars 337510400 train 2.3818 bpc lr 1.77e-04 241s
+step 20800 chars 340787200 train 2.3705 bpc lr 1.59e-04 243s
+step 21000 chars 344064000 train 2.3728 bpc lr 1.43e-04 246s
+step 21200 chars 347340800 train 2.3738 bpc lr 1.27e-04 248s
+step 21400 chars 350617600 train 2.3678 bpc lr 1.11e-04 250s
+step 21600 chars 353894400 train 2.3688 bpc lr 9.73e-05 253s
+step 21800 chars 357171200 train 2.3675 bpc lr 8.41e-05 255s
+step 22000 chars 360448000 train 2.3671 bpc lr 7.18e-05 257s
+step 22000 val 2.3947 bpc
+step 22200 chars 363724800 train 2.3671 bpc lr 6.05e-05 260s
+step 22400 chars 367001600 train 2.3746 bpc lr 5.01e-05 262s
+step 22600 chars 370278400 train 2.3634 bpc lr 4.07e-05 265s
+step 22800 chars 373555200 train 2.3588 bpc lr 3.23e-05 267s
+step 23000 chars 376832000 train 2.3631 bpc lr 2.48e-05 269s
+step 23200 chars 380108800 train 2.3660 bpc lr 1.83e-05 272s
+step 23400 chars 383385600 train 2.3615 bpc lr 1.28e-05 274s
+step 23600 chars 386662400 train 2.3681 bpc lr 8.24e-06 276s
+step 23800 chars 389939200 train 2.3545 bpc lr 4.69e-06 279s
+step 24000 chars 393216000 train 2.3594 bpc lr 2.14e-06 281s
+step 24000 val 2.3896 bpc
+step 24200 chars 396492800 train 2.3660 bpc lr 5.74e-07 283s
+step 24400 chars 399769600 train 2.3605 bpc lr 2.79e-09 286s
+done: prequential 2.5225 bpc, val 2.4055 bpc, 288s, 0.17 GB
+en 0.1M: 122801 parameters, 24414 steps, 399998976 chars
+step 200 chars 3276800 train 4.2468 bpc lr 1.20e-03 3s
+step 400 chars 6553600 train 3.6181 bpc lr 2.40e-03 5s
+step 600 chars 9830400 train 3.5863 bpc lr 3.00e-03 7s
+step 800 chars 13107200 train 3.4528 bpc lr 2.99e-03 10s
+step 1000 chars 16384000 train 3.2314 bpc lr 2.99e-03 12s
+step 1200 chars 19660800 train 3.0565 bpc lr 2.98e-03 14s
+step 1400 chars 22937600 train 2.9400 bpc lr 2.98e-03 17s
+step 1600 chars 26214400 train 2.8706 bpc lr 2.97e-03 19s
+step 1800 chars 29491200 train 2.8182 bpc lr 2.96e-03 21s
+step 2000 chars 32768000 train 2.7920 bpc lr 2.95e-03 24s
+step 2000 val 2.8389 bpc
+step 2200 chars 36044800 train 2.7559 bpc lr 2.94e-03 26s
+step 2400 chars 39321600 train 2.7335 bpc lr 2.93e-03 29s
+step 2600 chars 42598400 train 2.7159 bpc lr 2.92e-03 31s
+step 2800 chars 45875200 train 2.6967 bpc lr 2.90e-03 33s
+step 3000 chars 49152000 train 2.6847 bpc lr 2.89e-03 36s
+step 3200 chars 52428800 train 2.6680 bpc lr 2.87e-03 38s
+step 3400 chars 55705600 train 2.6615 bpc lr 2.86e-03 40s
+step 3600 chars 58982400 train 2.6553 bpc lr 2.84e-03 43s
+step 3800 chars 62259200 train 2.6367 bpc lr 2.82e-03 45s
+step 4000 chars 65536000 train 2.6248 bpc lr 2.81e-03 47s
+step 4000 val 2.7167 bpc
+step 4200 chars 68812800 train 2.6174 bpc lr 2.79e-03 50s
+step 4400 chars 72089600 train 2.6149 bpc lr 2.77e-03 52s
+step 4600 chars 75366400 train 2.6049 bpc lr 2.74e-03 55s
+step 4800 chars 78643200 train 2.6051 bpc lr 2.72e-03 57s
+step 5000 chars 81920000 train 2.5938 bpc lr 2.70e-03 59s
+step 5200 chars 85196800 train 2.5927 bpc lr 2.68e-03 62s
+step 5400 chars 88473600 train 2.5850 bpc lr 2.65e-03 64s
+step 5600 chars 91750400 train 2.5808 bpc lr 2.63e-03 66s
+step 5800 chars 95027200 train 2.5840 bpc lr 2.60e-03 69s
+step 6000 chars 98304000 train 2.5814 bpc lr 2.57e-03 71s
+step 6000 val 2.6468 bpc
+step 6200 chars 101580800 train 2.5718 bpc lr 2.55e-03 74s
+step 6400 chars 104857600 train 2.5672 bpc lr 2.52e-03 76s
+step 6600 chars 108134400 train 2.5650 bpc lr 2.49e-03 78s
+step 6800 chars 111411200 train 2.5631 bpc lr 2.46e-03 81s
+step 7000 chars 114688000 train 2.5663 bpc lr 2.43e-03 83s
+step 7200 chars 117964800 train 2.5628 bpc lr 2.40e-03 85s
+step 7400 chars 121241600 train 2.5771 bpc lr 2.37e-03 88s
+step 7600 chars 124518400 train 2.5772 bpc lr 2.34e-03 90s
+step 7800 chars 127795200 train 2.5678 bpc lr 2.31e-03 92s
+step 8000 chars 131072000 train 2.5707 bpc lr 2.27e-03 95s
+step 8000 val 2.6531 bpc
+step 8200 chars 134348800 train 2.5717 bpc lr 2.24e-03 97s
+step 8400 chars 137625600 train 2.5675 bpc lr 2.21e-03 100s
+step 8600 chars 140902400 train 2.5810 bpc lr 2.17e-03 102s
+step 8800 chars 144179200 train 2.5789 bpc lr 2.14e-03 104s
+step 9000 chars 147456000 train 2.6123 bpc lr 2.10e-03 107s
+step 9200 chars 150732800 train 2.6860 bpc lr 2.07e-03 109s
+step 9400 chars 154009600 train 2.7042 bpc lr 2.03e-03 111s
+step 9600 chars 157286400 train 2.6648 bpc lr 1.99e-03 113s
+step 9800 chars 160563200 train 2.6289 bpc lr 1.96e-03 116s
+step 10000 chars 163840000 train 2.5998 bpc lr 1.92e-03 118s
+step 10000 val 2.6784 bpc
+step 10200 chars 167116800 train 2.6048 bpc lr 1.88e-03 121s
+step 10400 chars 170393600 train 2.5909 bpc lr 1.85e-03 123s
+step 10600 chars 173670400 train 2.5927 bpc lr 1.81e-03 125s
+step 10800 chars 176947200 train 2.5845 bpc lr 1.77e-03 128s
+step 11000 chars 180224000 train 2.5774 bpc lr 1.73e-03 130s
+step 11200 chars 183500800 train 2.5796 bpc lr 1.69e-03 132s
+step 11400 chars 186777600 train 2.5691 bpc lr 1.66e-03 135s
+step 11600 chars 190054400 train 2.5722 bpc lr 1.62e-03 137s
+step 11800 chars 193331200 train 2.5706 bpc lr 1.58e-03 139s
+step 12000 chars 196608000 train 2.5705 bpc lr 1.54e-03 142s
+step 12000 val 2.6448 bpc
+step 12200 chars 199884800 train 2.5613 bpc lr 1.50e-03 144s
+step 12400 chars 203161600 train 2.5565 bpc lr 1.46e-03 146s
+step 12600 chars 206438400 train 2.5554 bpc lr 1.42e-03 149s
+step 12800 chars 209715200 train 2.5510 bpc lr 1.39e-03 151s
+step 13000 chars 212992000 train 2.5536 bpc lr 1.35e-03 153s
+step 13200 chars 216268800 train 2.5526 bpc lr 1.31e-03 156s
+step 13400 chars 219545600 train 2.5480 bpc lr 1.27e-03 158s
+step 13600 chars 222822400 train 2.5397 bpc lr 1.23e-03 160s
+step 13800 chars 226099200 train 2.5383 bpc lr 1.19e-03 163s
+step 14000 chars 229376000 train 2.5364 bpc lr 1.16e-03 165s
+step 14000 val 2.6170 bpc
+step 14200 chars 232652800 train 2.5329 bpc lr 1.12e-03 168s
+step 14400 chars 235929600 train 2.5297 bpc lr 1.08e-03 170s
+step 14600 chars 239206400 train 2.5264 bpc lr 1.05e-03 172s
+step 14800 chars 242483200 train 2.5289 bpc lr 1.01e-03 175s
+step 15000 chars 245760000 train 2.5198 bpc lr 9.73e-04 177s
+step 15200 chars 249036800 train 2.5189 bpc lr 9.37e-04 179s
+step 15400 chars 252313600 train 2.5160 bpc lr 9.01e-04 182s
+step 15600 chars 255590400 train 2.5109 bpc lr 8.66e-04 184s
+step 15800 chars 258867200 train 2.5093 bpc lr 8.31e-04 186s
+step 16000 chars 262144000 train 2.5093 bpc lr 7.97e-04 189s
+step 16000 val 2.5880 bpc
+step 16200 chars 265420800 train 2.5032 bpc lr 7.63e-04 191s
+step 16400 chars 268697600 train 2.5075 bpc lr 7.30e-04 193s
+step 16600 chars 271974400 train 2.4943 bpc lr 6.97e-04 196s
+step 16800 chars 275251200 train 2.4980 bpc lr 6.64e-04 198s
+step 17000 chars 278528000 train 2.4908 bpc lr 6.33e-04 201s
+step 17200 chars 281804800 train 2.4894 bpc lr 6.01e-04 203s
+step 17400 chars 285081600 train 2.4862 bpc lr 5.71e-04 205s
+step 17600 chars 288358400 train 2.4858 bpc lr 5.41e-04 208s
+step 17800 chars 291635200 train 2.4872 bpc lr 5.11e-04 210s
+step 18000 chars 294912000 train 2.4780 bpc lr 4.83e-04 212s
+step 18000 val 2.5626 bpc
+step 18200 chars 298188800 train 2.4762 bpc lr 4.55e-04 215s
+step 18400 chars 301465600 train 2.4793 bpc lr 4.27e-04 217s
+step 18600 chars 304742400 train 2.4698 bpc lr 4.01e-04 219s
+step 18800 chars 308019200 train 2.4716 bpc lr 3.75e-04 222s
+step 19000 chars 311296000 train 2.4675 bpc lr 3.50e-04 224s
+step 19200 chars 314572800 train 2.4661 bpc lr 3.25e-04 226s
+step 19400 chars 317849600 train 2.4697 bpc lr 3.02e-04 229s
+step 19600 chars 321126400 train 2.4601 bpc lr 2.79e-04 231s
+step 19800 chars 324403200 train 2.4599 bpc lr 2.57e-04 233s
+step 20000 chars 327680000 train 2.4581 bpc lr 2.36e-04 236s
+step 20000 val 2.5445 bpc
+step 20200 chars 330956800 train 2.4553 bpc lr 2.15e-04 238s
+step 20400 chars 334233600 train 2.4582 bpc lr 1.96e-04 241s
+step 20600 chars 337510400 train 2.4522 bpc lr 1.77e-04 243s
+step 20800 chars 340787200 train 2.4579 bpc lr 1.59e-04 245s
+step 21000 chars 344064000 train 2.4495 bpc lr 1.43e-04 248s
+step 21200 chars 347340800 train 2.4543 bpc lr 1.27e-04 250s
+step 21400 chars 350617600 train 2.4520 bpc lr 1.11e-04 252s
+step 21600 chars 353894400 train 2.4526 bpc lr 9.73e-05 255s
+step 21800 chars 357171200 train 2.4430 bpc lr 8.41e-05 257s
+step 22000 chars 360448000 train 2.4454 bpc lr 7.18e-05 259s
+step 22000 val 2.5293 bpc
+step 22200 chars 363724800 train 2.4464 bpc lr 6.05e-05 262s
+step 22400 chars 367001600 train 2.4416 bpc lr 5.01e-05 264s
+step 22600 chars 370278400 train 2.4406 bpc lr 4.07e-05 266s
+step 22800 chars 373555200 train 2.4385 bpc lr 3.23e-05 269s
+step 23000 chars 376832000 train 2.4350 bpc lr 2.48e-05 271s
+step 23200 chars 380108800 train 2.4409 bpc lr 1.83e-05 273s
+step 23400 chars 383385600 train 2.4381 bpc lr 1.28e-05 276s
+step 23600 chars 386662400 train 2.4398 bpc lr 8.24e-06 278s
+step 23800 chars 389939200 train 2.4341 bpc lr 4.69e-06 280s
+step 24000 chars 393216000 train 2.4389 bpc lr 2.14e-06 283s
+step 24000 val 2.5232 bpc
+step 24200 chars 396492800 train 2.4359 bpc lr 5.74e-07 285s
+step 24400 chars 399769600 train 2.4361 bpc lr 2.79e-09 288s
+done: prequential 2.5998 bpc, val 2.4253 bpc, 289s, 0.17 GB
+en_0.1M_on_pt 4.0239 bpc, mean entropy 2.8387
+en_0.1M_on_en 2.4288 bpc, mean entropy 2.4532
+pt_0.1M_on_pt 2.3695 bpc, mean entropy 2.3877
+pt_0.1M_on_en 3.4774 bpc, mean entropy 3.0796
+{
+ "model": "runs/pt_0.1M.pt",
+ "text": "data/pt/test.txt",
+ "chars": 1000000,
+ "streams": 512,
+ "round_trip_ok": true,
+ "file_bytes": 298837,
+ "header_bytes": 2056,
+ "real_bpc": 2.390696,
+ "ideal_bpc": 2.3718821694489867,
+ "encode_seconds": 123.31479668617249,
+ "decode_seconds": 130.75697660446167
+}
+{
+ "model": "runs/en_0.1M.pt",
+ "text": "data/en/test.txt",
+ "chars": 1000000,
+ "streams": 512,
+ "round_trip_ok": true,
+ "file_bytes": 304167,
+ "header_bytes": 2056,
+ "real_bpc": 2.433336,
+ "ideal_bpc": 2.414575519803822,
+ "encode_seconds": 123.81624436378479,
+ "decode_seconds": 130.6332836151123
+}
+0.1M pt text: D = 1.655 bits/char, std 2.763; {'0.1': {'n_stein': 2.0, 'n_clt': 4.6, 'n_measured': 9}, '0.01': {'n_stein': 4.0, 'n_clt': 15.1, 'n_measured': None}, '0.001': {'n_stein': 6.0, 'n_clt': 26.6, 'n_measured': None}}
+0.1M en text: D = 1.052 bits/char, std 1.992; {'0.1': {'n_stein': 3.2, 'n_clt': 5.9, 'n_measured': 9}, '0.01': {'n_stein': 6.3, 'n_clt': 19.4, 'n_measured': 208}, '0.001': {'n_stein': 9.5, 'n_clt': 34.2, 'n_measured': None}}
+pt 1M: 1036977 parameters, 24414 steps, 399998976 chars
+step 200 chars 3276800 train 3.8739 bpc lr 8.00e-04 8s
+step 400 chars 6553600 train 3.4507 bpc lr 1.60e-03 15s
+step 600 chars 9830400 train 3.2392 bpc lr 2.00e-03 23s
+step 800 chars 13107200 train 2.7988 bpc lr 1.99e-03 31s
+step 1000 chars 16384000 train 2.5446 bpc lr 1.99e-03 38s
+step 1200 chars 19660800 train 2.4070 bpc lr 1.99e-03 46s
+step 1400 chars 22937600 train 2.3325 bpc lr 1.98e-03 53s
+step 1600 chars 26214400 train 2.2790 bpc lr 1.98e-03 61s
+step 1800 chars 29491200 train 2.2382 bpc lr 1.97e-03 68s
+step 2000 chars 32768000 train 2.2061 bpc lr 1.97e-03 76s
+step 2000 val 2.2283 bpc
+step 2200 chars 36044800 train 2.1803 bpc lr 1.96e-03 84s
+step 2400 chars 39321600 train 2.1550 bpc lr 1.95e-03 92s
+step 2600 chars 42598400 train 2.1382 bpc lr 1.94e-03 99s
+step 2800 chars 45875200 train 2.1220 bpc lr 1.94e-03 107s
+step 3000 chars 49152000 train 2.1140 bpc lr 1.93e-03 114s
+step 3200 chars 52428800 train 2.0900 bpc lr 1.92e-03 122s
+step 3400 chars 55705600 train 2.0890 bpc lr 1.91e-03 129s
+step 3600 chars 58982400 train 2.0738 bpc lr 1.89e-03 137s
+step 3800 chars 62259200 train 2.0679 bpc lr 1.88e-03 144s
+step 4000 chars 65536000 train 2.0587 bpc lr 1.87e-03 152s
+step 4000 val 2.0894 bpc
+step 4200 chars 68812800 train 2.0506 bpc lr 1.86e-03 160s
+step 4400 chars 72089600 train 2.0437 bpc lr 1.84e-03 167s
+step 4600 chars 75366400 train 2.0314 bpc lr 1.83e-03 175s
+step 4800 chars 78643200 train 2.0364 bpc lr 1.82e-03 183s
+step 5000 chars 81920000 train 2.0210 bpc lr 1.80e-03 190s
+step 5200 chars 85196800 train 2.0161 bpc lr 1.78e-03 198s
+step 5400 chars 88473600 train 2.0148 bpc lr 1.77e-03 205s
+step 5600 chars 91750400 train 2.0103 bpc lr 1.75e-03 213s
+step 5800 chars 95027200 train 2.0152 bpc lr 1.73e-03 220s
+step 6000 chars 98304000 train 1.9974 bpc lr 1.72e-03 228s
+step 6000 val 2.0371 bpc
+step 6200 chars 101580800 train 1.9899 bpc lr 1.70e-03 236s
+step 6400 chars 104857600 train 1.9999 bpc lr 1.68e-03 243s
+step 6600 chars 108134400 train 1.9832 bpc lr 1.66e-03 251s
+step 6800 chars 111411200 train 1.9819 bpc lr 1.64e-03 259s
+step 7000 chars 114688000 train 1.9781 bpc lr 1.62e-03 266s
+step 7200 chars 117964800 train 1.9796 bpc lr 1.60e-03 274s
+step 7400 chars 121241600 train 1.9741 bpc lr 1.58e-03 281s
+step 7600 chars 124518400 train 1.9736 bpc lr 1.56e-03 289s
+step 7800 chars 127795200 train 1.9641 bpc lr 1.54e-03 296s
+step 8000 chars 131072000 train 1.9669 bpc lr 1.52e-03 304s
+step 8000 val 1.9984 bpc
+step 8200 chars 134348800 train 1.9631 bpc lr 1.49e-03 312s
+step 8400 chars 137625600 train 1.9563 bpc lr 1.47e-03 320s
+step 8600 chars 140902400 train 1.9521 bpc lr 1.45e-03 327s
+step 8800 chars 144179200 train 1.9533 bpc lr 1.42e-03 335s
+step 9000 chars 147456000 train 1.9528 bpc lr 1.40e-03 342s
+step 9200 chars 150732800 train 1.9452 bpc lr 1.38e-03 350s
+step 9400 chars 154009600 train 1.9449 bpc lr 1.35e-03 357s
+step 9600 chars 157286400 train 1.9428 bpc lr 1.33e-03 365s
+step 9800 chars 160563200 train 1.9359 bpc lr 1.30e-03 373s
+step 10000 chars 163840000 train 1.9348 bpc lr 1.28e-03 380s
+step 10000 val 1.9760 bpc
+step 10200 chars 167116800 train 1.9329 bpc lr 1.26e-03 388s
+step 10400 chars 170393600 train 1.9281 bpc lr 1.23e-03 396s
+step 10600 chars 173670400 train 1.9270 bpc lr 1.21e-03 403s
+step 10800 chars 176947200 train 1.9210 bpc lr 1.18e-03 411s
+step 11000 chars 180224000 train 1.9182 bpc lr 1.15e-03 419s
+step 11200 chars 183500800 train 1.9226 bpc lr 1.13e-03 426s
+step 11400 chars 186777600 train 1.9167 bpc lr 1.10e-03 434s
+step 11600 chars 190054400 train 1.9141 bpc lr 1.08e-03 441s
+step 11800 chars 193331200 train 1.9060 bpc lr 1.05e-03 449s
+step 12000 chars 196608000 train 1.9107 bpc lr 1.03e-03 456s
+step 12000 val 1.9467 bpc
+step 12200 chars 199884800 train 1.9067 bpc lr 1.00e-03 464s
+step 12400 chars 203161600 train 1.8999 bpc lr 9.75e-04 472s
+step 12600 chars 206438400 train 1.9035 bpc lr 9.50e-04 480s
+step 12800 chars 209715200 train 1.8985 bpc lr 9.24e-04 487s
+step 13000 chars 212992000 train 1.9029 bpc lr 8.98e-04 495s
+step 13200 chars 216268800 train 1.8944 bpc lr 8.73e-04 502s
+step 13400 chars 219545600 train 1.8907 bpc lr 8.47e-04 510s
+step 13600 chars 222822400 train 1.8853 bpc lr 8.22e-04 517s
+step 13800 chars 226099200 train 1.8858 bpc lr 7.97e-04 525s
+step 14000 chars 229376000 train 1.8737 bpc lr 7.71e-04 532s
+step 14000 val 1.9177 bpc
+step 14200 chars 232652800 train 1.8722 bpc lr 7.46e-04 540s
+step 14400 chars 235929600 train 1.8752 bpc lr 7.22e-04 548s
+step 14600 chars 239206400 train 1.8733 bpc lr 6.97e-04 556s
+step 14800 chars 242483200 train 1.8654 bpc lr 6.73e-04 563s
+step 15000 chars 245760000 train 1.8605 bpc lr 6.48e-04 571s
+step 15200 chars 249036800 train 1.8576 bpc lr 6.24e-04 578s
+step 15400 chars 252313600 train 1.8512 bpc lr 6.01e-04 586s
+step 15600 chars 255590400 train 1.8492 bpc lr 5.77e-04 593s
+step 15800 chars 258867200 train 1.8423 bpc lr 5.54e-04 601s
+step 16000 chars 262144000 train 1.8385 bpc lr 5.31e-04 609s
+step 16000 val 1.8860 bpc
+step 16200 chars 265420800 train 1.8444 bpc lr 5.09e-04 617s
+step 16400 chars 268697600 train 1.8346 bpc lr 4.86e-04 624s
+step 16600 chars 271974400 train 1.8372 bpc lr 4.64e-04 632s
+step 16800 chars 275251200 train 1.8307 bpc lr 4.43e-04 639s
+step 17000 chars 278528000 train 1.8292 bpc lr 4.22e-04 647s
+step 17200 chars 281804800 train 1.8253 bpc lr 4.01e-04 655s
+step 17400 chars 285081600 train 1.8313 bpc lr 3.80e-04 662s
+step 17600 chars 288358400 train 1.8273 bpc lr 3.61e-04 670s
+step 17800 chars 291635200 train 1.8225 bpc lr 3.41e-04 677s
+step 18000 chars 294912000 train 1.8146 bpc lr 3.22e-04 685s
+step 18000 val 1.8556 bpc
+step 18200 chars 298188800 train 1.8148 bpc lr 3.03e-04 693s
+step 18400 chars 301465600 train 1.8103 bpc lr 2.85e-04 700s
+step 18600 chars 304742400 train 1.8162 bpc lr 2.67e-04 708s
+step 18800 chars 308019200 train 1.8136 bpc lr 2.50e-04 716s
+step 19000 chars 311296000 train 1.8055 bpc lr 2.33e-04 723s
+step 19200 chars 314572800 train 1.8068 bpc lr 2.17e-04 731s
+step 19400 chars 317849600 train 1.8030 bpc lr 2.01e-04 738s
+step 19600 chars 321126400 train 1.8027 bpc lr 1.86e-04 746s
+step 19800 chars 324403200 train 1.7957 bpc lr 1.71e-04 753s
+step 20000 chars 327680000 train 1.7938 bpc lr 1.57e-04 761s
+step 20000 val 1.8371 bpc
+step 20200 chars 330956800 train 1.7947 bpc lr 1.44e-04 769s
+step 20400 chars 334233600 train 1.7928 bpc lr 1.31e-04 777s
+step 20600 chars 337510400 train 1.7976 bpc lr 1.18e-04 784s
+step 20800 chars 340787200 train 1.7872 bpc lr 1.06e-04 792s
+step 21000 chars 344064000 train 1.7856 bpc lr 9.50e-05 799s
+step 21200 chars 347340800 train 1.7872 bpc lr 8.44e-05 807s
+step 21400 chars 350617600 train 1.7829 bpc lr 7.43e-05 814s
+step 21600 chars 353894400 train 1.7839 bpc lr 6.49e-05 822s
+step 21800 chars 357171200 train 1.7857 bpc lr 5.61e-05 830s
+step 22000 chars 360448000 train 1.7812 bpc lr 4.79e-05 837s
+step 22000 val 1.8235 bpc
+step 22200 chars 363724800 train 1.7835 bpc lr 4.03e-05 845s
+step 22400 chars 367001600 train 1.7880 bpc lr 3.34e-05 853s
+step 22600 chars 370278400 train 1.7803 bpc lr 2.72e-05 860s
+step 22800 chars 373555200 train 1.7749 bpc lr 2.15e-05 868s
+step 23000 chars 376832000 train 1.7803 bpc lr 1.65e-05 875s
+step 23200 chars 380108800 train 1.7793 bpc lr 1.22e-05 883s
+step 23400 chars 383385600 train 1.7759 bpc lr 8.52e-06 891s
+step 23600 chars 386662400 train 1.7823 bpc lr 5.49e-06 898s
+step 23800 chars 389939200 train 1.7729 bpc lr 3.13e-06 906s
+step 24000 chars 393216000 train 1.7770 bpc lr 1.43e-06 913s
+step 24000 val 1.8184 bpc
+step 24200 chars 396492800 train 1.7793 bpc lr 3.83e-07 921s
+step 24400 chars 399769600 train 1.7765 bpc lr 1.86e-09 929s
+done: prequential 1.9694 bpc, val 1.8153 bpc, 934s, 0.51 GB
+en 1M: 1036977 parameters, 24414 steps, 399998976 chars
+step 200 chars 3276800 train 3.9866 bpc lr 8.00e-04 8s
+step 400 chars 6553600 train 3.5732 bpc lr 1.60e-03 15s
+step 600 chars 9830400 train 3.2501 bpc lr 2.00e-03 23s
+step 800 chars 13107200 train 2.8170 bpc lr 1.99e-03 31s
+step 1000 chars 16384000 train 2.5846 bpc lr 1.99e-03 38s
+step 1200 chars 19660800 train 2.4621 bpc lr 1.99e-03 46s
+step 1400 chars 22937600 train 2.3840 bpc lr 1.98e-03 53s
+step 1600 chars 26214400 train 2.3379 bpc lr 1.98e-03 61s
+step 1800 chars 29491200 train 2.2998 bpc lr 1.97e-03 68s
+step 2000 chars 32768000 train 2.2756 bpc lr 1.97e-03 76s
+step 2000 val 2.3458 bpc
+step 2200 chars 36044800 train 2.2494 bpc lr 1.96e-03 84s
+step 2400 chars 39321600 train 2.2310 bpc lr 1.95e-03 91s
+step 2600 chars 42598400 train 2.2174 bpc lr 1.94e-03 99s
+step 2800 chars 45875200 train 2.1977 bpc lr 1.94e-03 106s
+step 3000 chars 49152000 train 2.1877 bpc lr 1.93e-03 114s
+step 3200 chars 52428800 train 2.1714 bpc lr 1.92e-03 121s
+step 3400 chars 55705600 train 2.1615 bpc lr 1.91e-03 129s
+step 3600 chars 58982400 train 2.1578 bpc lr 1.89e-03 137s
+step 3800 chars 62259200 train 2.1384 bpc lr 1.88e-03 144s
+step 4000 chars 65536000 train 2.1256 bpc lr 1.87e-03 152s
+step 4000 val 2.2168 bpc
+step 4200 chars 68812800 train 2.1156 bpc lr 1.86e-03 160s
+step 4400 chars 72089600 train 2.1049 bpc lr 1.84e-03 167s
+step 4600 chars 75366400 train 2.0930 bpc lr 1.83e-03 175s
+step 4800 chars 78643200 train 2.0809 bpc lr 1.82e-03 182s
+step 5000 chars 81920000 train 2.0652 bpc lr 1.80e-03 190s
+step 5200 chars 85196800 train 2.0558 bpc lr 1.78e-03 197s
+step 5400 chars 88473600 train 2.0444 bpc lr 1.77e-03 205s
+step 5600 chars 91750400 train 2.0381 bpc lr 1.75e-03 213s
+step 5800 chars 95027200 train 2.0388 bpc lr 1.73e-03 220s
+step 6000 chars 98304000 train 2.0310 bpc lr 1.72e-03 228s
+step 6000 val 2.1126 bpc
+step 6200 chars 101580800 train 2.0201 bpc lr 1.70e-03 236s
+step 6400 chars 104857600 train 2.0193 bpc lr 1.68e-03 243s
+step 6600 chars 108134400 train 2.0108 bpc lr 1.66e-03 251s
+step 6800 chars 111411200 train 2.0065 bpc lr 1.64e-03 258s
+step 7000 chars 114688000 train 2.0044 bpc lr 1.62e-03 266s
+step 7200 chars 117964800 train 1.9964 bpc lr 1.60e-03 273s
+step 7400 chars 121241600 train 1.9909 bpc lr 1.58e-03 281s
+step 7600 chars 124518400 train 1.9907 bpc lr 1.56e-03 288s
+step 7800 chars 127795200 train 1.9825 bpc lr 1.54e-03 296s
+step 8000 chars 131072000 train 1.9868 bpc lr 1.52e-03 303s
+step 8000 val 2.0741 bpc
+step 8200 chars 134348800 train 1.9766 bpc lr 1.49e-03 311s
+step 8400 chars 137625600 train 1.9652 bpc lr 1.47e-03 319s
+step 8600 chars 140902400 train 1.9663 bpc lr 1.45e-03 326s
+step 8800 chars 144179200 train 1.9645 bpc lr 1.42e-03 334s
+step 9000 chars 147456000 train 1.9661 bpc lr 1.40e-03 342s
+step 9200 chars 150732800 train 1.9567 bpc lr 1.38e-03 349s
+step 9400 chars 154009600 train 1.9578 bpc lr 1.35e-03 357s
+step 9600 chars 157286400 train 1.9546 bpc lr 1.33e-03 364s
+step 9800 chars 160563200 train 1.9479 bpc lr 1.30e-03 372s
+step 10000 chars 163840000 train 1.9460 bpc lr 1.28e-03 379s
+step 10000 val 2.0424 bpc
+step 10200 chars 167116800 train 1.9505 bpc lr 1.26e-03 387s
+step 10400 chars 170393600 train 1.9392 bpc lr 1.23e-03 395s
+step 10600 chars 173670400 train 1.9411 bpc lr 1.21e-03 402s
+step 10800 chars 176947200 train 1.9397 bpc lr 1.18e-03 410s
+step 11000 chars 180224000 train 1.9310 bpc lr 1.15e-03 418s
+step 11200 chars 183500800 train 1.9317 bpc lr 1.13e-03 425s
+step 11400 chars 186777600 train 1.9253 bpc lr 1.10e-03 433s
+step 11600 chars 190054400 train 1.9268 bpc lr 1.08e-03 440s
+step 11800 chars 193331200 train 1.9247 bpc lr 1.05e-03 448s
+step 12000 chars 196608000 train 1.9253 bpc lr 1.03e-03 455s
+step 12000 val 2.0139 bpc
+step 12200 chars 199884800 train 1.9205 bpc lr 1.00e-03 463s
+step 12400 chars 203161600 train 1.9151 bpc lr 9.75e-04 471s
+step 12600 chars 206438400 train 1.9134 bpc lr 9.50e-04 478s
+step 12800 chars 209715200 train 1.9077 bpc lr 9.24e-04 486s
+step 13000 chars 212992000 train 1.9148 bpc lr 8.98e-04 493s
+step 13200 chars 216268800 train 1.9120 bpc lr 8.73e-04 501s
+step 13400 chars 219545600 train 1.9063 bpc lr 8.47e-04 509s
+step 13600 chars 222822400 train 1.9019 bpc lr 8.22e-04 516s
+step 13800 chars 226099200 train 1.9037 bpc lr 7.97e-04 524s
+step 14000 chars 229376000 train 1.8961 bpc lr 7.71e-04 531s
+step 14000 val 1.9893 bpc
+step 14200 chars 232652800 train 1.8993 bpc lr 7.46e-04 539s
+step 14400 chars 235929600 train 1.8929 bpc lr 7.22e-04 547s
+step 14600 chars 239206400 train 1.8889 bpc lr 6.97e-04 554s
+step 14800 chars 242483200 train 1.8952 bpc lr 6.73e-04 562s
+step 15000 chars 245760000 train 1.8899 bpc lr 6.48e-04 570s
+step 15200 chars 249036800 train 1.8882 bpc lr 6.24e-04 577s
+step 15400 chars 252313600 train 1.8863 bpc lr 6.01e-04 585s
+step 15600 chars 255590400 train 1.8837 bpc lr 5.77e-04 592s
+step 15800 chars 258867200 train 1.8817 bpc lr 5.54e-04 600s
+step 16000 chars 262144000 train 1.8828 bpc lr 5.31e-04 607s
+step 16000 val 1.9717 bpc
+step 16200 chars 265420800 train 1.8766 bpc lr 5.09e-04 615s
+step 16400 chars 268697600 train 1.8788 bpc lr 4.86e-04 623s
+step 16600 chars 271974400 train 1.8698 bpc lr 4.64e-04 631s
+step 16800 chars 275251200 train 1.8780 bpc lr 4.43e-04 638s
+step 17000 chars 278528000 train 1.8699 bpc lr 4.22e-04 646s
+step 17200 chars 281804800 train 1.8741 bpc lr 4.01e-04 653s
+step 17400 chars 285081600 train 1.8741 bpc lr 3.80e-04 661s
+step 17600 chars 288358400 train 1.8823 bpc lr 3.61e-04 669s
+step 17800 chars 291635200 train 1.9019 bpc lr 3.41e-04 676s
+step 18000 chars 294912000 train 1.8899 bpc lr 3.22e-04 684s
+step 18000 val 1.9789 bpc
+step 18200 chars 298188800 train 1.8814 bpc lr 3.03e-04 692s
+step 18400 chars 301465600 train 1.8873 bpc lr 2.85e-04 699s
+step 18600 chars 304742400 train 1.8768 bpc lr 2.67e-04 707s
+step 18800 chars 308019200 train 1.8756 bpc lr 2.50e-04 715s
+step 19000 chars 311296000 train 1.8762 bpc lr 2.33e-04 722s
+step 19200 chars 314572800 train 1.8739 bpc lr 2.17e-04 730s
+step 19400 chars 317849600 train 1.8727 bpc lr 2.01e-04 737s
+step 19600 chars 321126400 train 1.8683 bpc lr 1.86e-04 745s
+step 19800 chars 324403200 train 1.8652 bpc lr 1.71e-04 753s
+step 20000 chars 327680000 train 1.8658 bpc lr 1.57e-04 760s
+step 20000 val 1.9619 bpc
+step 20200 chars 330956800 train 1.8672 bpc lr 1.44e-04 768s
+step 20400 chars 334233600 train 1.8654 bpc lr 1.31e-04 776s
+step 20600 chars 337510400 train 1.8637 bpc lr 1.18e-04 783s
+step 20800 chars 340787200 train 1.8694 bpc lr 1.06e-04 791s
+step 21000 chars 344064000 train 1.8626 bpc lr 9.50e-05 799s
+step 21200 chars 347340800 train 1.8694 bpc lr 8.44e-05 806s
+step 21400 chars 350617600 train 1.8682 bpc lr 7.43e-05 814s
+step 21600 chars 353894400 train 1.8736 bpc lr 6.49e-05 821s
+step 21800 chars 357171200 train 1.8653 bpc lr 5.61e-05 829s
+step 22000 chars 360448000 train 1.8699 bpc lr 4.79e-05 836s
+step 22000 val 1.9623 bpc
+step 22200 chars 363724800 train 1.8730 bpc lr 4.03e-05 844s
+step 22400 chars 367001600 train 1.8692 bpc lr 3.34e-05 852s
+step 22600 chars 370278400 train 1.8699 bpc lr 2.72e-05 859s
+step 22800 chars 373555200 train 1.8672 bpc lr 2.15e-05 867s
+step 23000 chars 376832000 train 1.8655 bpc lr 1.65e-05 875s
+step 23200 chars 380108800 train 1.8695 bpc lr 1.22e-05 882s
+step 23400 chars 383385600 train 1.8673 bpc lr 8.52e-06 890s
+step 23600 chars 386662400 train 1.8675 bpc lr 5.49e-06 897s
+step 23800 chars 389939200 train 1.8650 bpc lr 3.13e-06 905s
+step 24000 chars 393216000 train 1.8686 bpc lr 1.43e-06 912s
+step 24000 val 1.9616 bpc
+step 24200 chars 396492800 train 1.8659 bpc lr 3.83e-07 921s
+step 24400 chars 399769600 train 1.8689 bpc lr 1.86e-09 928s
+done: prequential 2.0166 bpc, val 1.8694 bpc, 933s, 0.51 GB
+en_1M_on_pt 3.4297 bpc, mean entropy 2.6562
+en_1M_on_en 1.8498 bpc, mean entropy 1.8469
+pt_1M_on_pt 1.7994 bpc, mean entropy 1.8078
+pt_1M_on_en 2.7362 bpc, mean entropy 2.5673
+{
+ "model": "runs/pt_1M.pt",
+ "text": "data/pt/test.txt",
+ "chars": 1000000,
+ "streams": 512,
+ "round_trip_ok": true,
+ "file_bytes": 223354,
+ "header_bytes": 2056,
+ "real_bpc": 1.786832,
+ "ideal_bpc": 1.7680504173548646,
+ "encode_seconds": 395.2873785495758,
+ "decode_seconds": 401.7583284378052
+}
+{
+ "model": "runs/en_1M.pt",
+ "text": "data/en/test.txt",
+ "chars": 1000000,
+ "streams": 512,
+ "round_trip_ok": true,
+ "file_bytes": 226502,
+ "header_bytes": 2056,
+ "real_bpc": 1.812016,
+ "ideal_bpc": 1.793355488351124,
+ "encode_seconds": 398.1097824573517,
+ "decode_seconds": 400.88651156425476
+}
+0.1M pt text: D = 1.655 bits/char, std 2.763; {'0.1': {'n_stein': 2.0, 'n_clt': 4.6, 'n_measured': 9}, '0.01': {'n_stein': 4.0, 'n_clt': 15.1, 'n_measured': None}, '0.001': {'n_stein': 6.0, 'n_clt': 26.6, 'n_measured': None}}
+0.1M en text: D = 1.052 bits/char, std 1.992; {'0.1': {'n_stein': 3.2, 'n_clt': 5.9, 'n_measured': 9}, '0.01': {'n_stein': 6.3, 'n_clt': 19.4, 'n_measured': 208}, '0.001': {'n_stein': 9.5, 'n_clt': 34.2, 'n_measured': None}}
+1M pt text: D = 1.634 bits/char, std 2.682; {'0.1': {'n_stein': 2.0, 'n_clt': 4.4, 'n_measured': 7}, '0.01': {'n_stein': 4.1, 'n_clt': 14.6, 'n_measured': None}, '0.001': {'n_stein': 6.1, 'n_clt': 25.7, 'n_measured': None}}
+1M en text: D = 0.887 bits/char, std 1.807; {'0.1': {'n_stein': 3.7, 'n_clt': 6.8, 'n_measured': 8}, '0.01': {'n_stein': 7.5, 'n_clt': 22.5, 'n_measured': 118}, '0.001': {'n_stein': 11.2, 'n_clt': 39.6, 'n_measured': None}}
+pt 10M: 9977649 parameters, 24414 steps, 399998976 chars
+step 200 chars 3276800 train 3.7051 bpc lr 4.00e-04 40s
+step 400 chars 6553600 train 3.4173 bpc lr 7.99e-04 81s
+step 600 chars 9830400 train 2.9977 bpc lr 9.99e-04 121s
+step 800 chars 13107200 train 2.5011 bpc lr 9.97e-04 161s
+step 1000 chars 16384000 train 2.2759 bpc lr 9.96e-04 201s
+step 1200 chars 19660800 train 2.1610 bpc lr 9.94e-04 241s
+step 1400 chars 22937600 train 2.0784 bpc lr 9.92e-04 282s
+step 1600 chars 26214400 train 2.0044 bpc lr 9.89e-04 322s
+step 1800 chars 29491200 train 1.9589 bpc lr 9.87e-04 362s
+step 2000 chars 32768000 train 1.9227 bpc lr 9.84e-04 402s
+step 2000 val 1.9509 bpc
+step 2200 chars 36044800 train 1.8961 bpc lr 9.80e-04 445s
+step 2400 chars 39321600 train 1.8683 bpc lr 9.76e-04 485s
+step 2600 chars 42598400 train 1.8501 bpc lr 9.72e-04 525s
+step 2800 chars 45875200 train 1.8341 bpc lr 9.68e-04 565s
+step 3000 chars 49152000 train 1.8255 bpc lr 9.63e-04 606s
+step 3200 chars 52428800 train 1.8003 bpc lr 9.58e-04 646s
+step 3400 chars 55705600 train 1.7974 bpc lr 9.53e-04 686s
+step 3600 chars 58982400 train 1.7828 bpc lr 9.47e-04 726s
+step 3800 chars 62259200 train 1.7786 bpc lr 9.41e-04 766s
+step 4000 chars 65536000 train 1.7693 bpc lr 9.35e-04 807s
+step 4000 val 1.8046 bpc
+step 4200 chars 68812800 train 1.7577 bpc lr 9.29e-04 849s
+step 4400 chars 72089600 train 1.7518 bpc lr 9.22e-04 889s
+step 4600 chars 75366400 train 1.7398 bpc lr 9.15e-04 929s
+step 4800 chars 78643200 train 1.7400 bpc lr 9.08e-04 969s
+step 5000 chars 81920000 train 1.7265 bpc lr 9.00e-04 1009s
+step 5200 chars 85196800 train 1.7209 bpc lr 8.92e-04 1049s
+step 5400 chars 88473600 train 1.7185 bpc lr 8.84e-04 1089s
+step 5600 chars 91750400 train 1.7130 bpc lr 8.76e-04 1130s
+step 5800 chars 95027200 train 1.7130 bpc lr 8.67e-04 1170s
+step 6000 chars 98304000 train 1.7024 bpc lr 8.58e-04 1210s
+step 6000 val 1.7384 bpc
+step 6200 chars 101580800 train 1.6915 bpc lr 8.49e-04 1252s
+step 6400 chars 104857600 train 1.6994 bpc lr 8.40e-04 1292s
+step 6600 chars 108134400 train 1.6835 bpc lr 8.30e-04 1332s
+step 6800 chars 111411200 train 1.6795 bpc lr 8.21e-04 1372s
+step 7000 chars 114688000 train 1.6768 bpc lr 8.11e-04 1413s
+step 7200 chars 117964800 train 1.6758 bpc lr 8.00e-04 1453s
+step 7400 chars 121241600 train 1.6694 bpc lr 7.90e-04 1493s
+step 7600 chars 124518400 train 1.6707 bpc lr 7.79e-04 1533s
+step 7800 chars 127795200 train 1.6607 bpc lr 7.69e-04 1573s
+step 8000 chars 131072000 train 1.6612 bpc lr 7.58e-04 1613s
+step 8000 val 1.6998 bpc
+step 8200 chars 134348800 train 1.6578 bpc lr 7.47e-04 1655s
+step 8400 chars 137625600 train 1.6502 bpc lr 7.35e-04 1696s
+step 8600 chars 140902400 train 1.6463 bpc lr 7.24e-04 1736s
+step 8800 chars 144179200 train 1.6465 bpc lr 7.12e-04 1776s
+step 9000 chars 147456000 train 1.6429 bpc lr 7.01e-04 1816s
+step 9200 chars 150732800 train 1.6396 bpc lr 6.89e-04 1856s
+step 9400 chars 154009600 train 1.6369 bpc lr 6.77e-04 1897s
+step 9600 chars 157286400 train 1.6321 bpc lr 6.65e-04 1937s
+step 9800 chars 160563200 train 1.6273 bpc lr 6.52e-04 1977s
+step 10000 chars 163840000 train 1.6251 bpc lr 6.40e-04 2017s
+step 10000 val 1.6682 bpc
+step 10200 chars 167116800 train 1.6225 bpc lr 6.28e-04 2059s
+step 10400 chars 170393600 train 1.6177 bpc lr 6.15e-04 2100s
+step 10600 chars 173670400 train 1.6180 bpc lr 6.03e-04 2140s
+step 10800 chars 176947200 train 1.6120 bpc lr 5.90e-04 2180s
+step 11000 chars 180224000 train 1.6066 bpc lr 5.77e-04 2220s
+step 11200 chars 183500800 train 1.6106 bpc lr 5.65e-04 2260s
+step 11400 chars 186777600 train 1.6058 bpc lr 5.52e-04 2301s
+step 11600 chars 190054400 train 1.6035 bpc lr 5.39e-04 2341s
+step 11800 chars 193331200 train 1.5971 bpc lr 5.26e-04 2381s
+step 12000 chars 196608000 train 1.6008 bpc lr 5.13e-04 2421s
+step 12000 val 1.6400 bpc
+step 12200 chars 199884800 train 1.5955 bpc lr 5.01e-04 2463s
+step 12400 chars 203161600 train 1.5911 bpc lr 4.88e-04 2503s
+step 12600 chars 206438400 train 1.5935 bpc lr 4.75e-04 2544s
+step 12800 chars 209715200 train 1.5870 bpc lr 4.62e-04 2584s
+step 13000 chars 212992000 train 1.5923 bpc lr 4.49e-04 2624s
+step 13200 chars 216268800 train 1.5854 bpc lr 4.36e-04 2664s
+step 13400 chars 219545600 train 1.5829 bpc lr 4.24e-04 2704s
+step 13600 chars 222822400 train 1.5773 bpc lr 4.11e-04 2745s
+step 13800 chars 226099200 train 1.5778 bpc lr 3.98e-04 2785s
+step 14000 chars 229376000 train 1.5679 bpc lr 3.86e-04 2825s
+step 14000 val 1.6121 bpc
+step 14200 chars 232652800 train 1.5682 bpc lr 3.73e-04 2867s
+step 14400 chars 235929600 train 1.5691 bpc lr 3.61e-04 2907s
+step 14600 chars 239206400 train 1.5678 bpc lr 3.49e-04 2947s
+step 14800 chars 242483200 train 1.5626 bpc lr 3.36e-04 2988s
+step 15000 chars 245760000 train 1.5575 bpc lr 3.24e-04 3028s
+step 15200 chars 249036800 train 1.5569 bpc lr 3.12e-04 3068s
+step 15400 chars 252313600 train 1.5519 bpc lr 3.00e-04 3108s
+step 15600 chars 255590400 train 1.5517 bpc lr 2.89e-04 3148s
+step 15800 chars 258867200 train 1.5444 bpc lr 2.77e-04 3189s
+step 16000 chars 262144000 train 1.5432 bpc lr 2.66e-04 3229s
+step 16000 val 1.5889 bpc
+step 16200 chars 265420800 train 1.5468 bpc lr 2.54e-04 3271s
+step 16400 chars 268697600 train 1.5405 bpc lr 2.43e-04 3311s
+step 16600 chars 271974400 train 1.5412 bpc lr 2.32e-04 3351s
+step 16800 chars 275251200 train 1.5354 bpc lr 2.21e-04 3391s
+step 17000 chars 278528000 train 1.5361 bpc lr 2.11e-04 3431s
+step 17200 chars 281804800 train 1.5307 bpc lr 2.00e-04 3472s
+step 17400 chars 285081600 train 1.5388 bpc lr 1.90e-04 3512s
+step 17600 chars 288358400 train 1.5342 bpc lr 1.80e-04 3552s
+step 17800 chars 291635200 train 1.5313 bpc lr 1.70e-04 3592s
+step 18000 chars 294912000 train 1.5244 bpc lr 1.61e-04 3632s
+step 18000 val 1.5662 bpc
+step 18200 chars 298188800 train 1.5248 bpc lr 1.52e-04 3674s
+step 18400 chars 301465600 train 1.5192 bpc lr 1.42e-04 3714s
+step 18600 chars 304742400 train 1.5264 bpc lr 1.34e-04 3754s
+step 18800 chars 308019200 train 1.5226 bpc lr 1.25e-04 3794s
+step 19000 chars 311296000 train 1.5175 bpc lr 1.17e-04 3835s
+step 19200 chars 314572800 train 1.5186 bpc lr 1.08e-04 3875s
+step 19400 chars 317849600 train 1.5142 bpc lr 1.01e-04 3915s
+step 19600 chars 321126400 train 1.5160 bpc lr 9.29e-05 3955s
+step 19800 chars 324403200 train 1.5096 bpc lr 8.56e-05 3995s
+step 20000 chars 327680000 train 1.5072 bpc lr 7.85e-05 4035s
+step 20000 val 1.5519 bpc
+step 20200 chars 330956800 train 1.5105 bpc lr 7.18e-05 4078s
+step 20400 chars 334233600 train 1.5070 bpc lr 6.53e-05 4118s
+step 20600 chars 337510400 train 1.5114 bpc lr 5.90e-05 4158s
+step 20800 chars 340787200 train 1.5030 bpc lr 5.31e-05 4198s
+step 21000 chars 344064000 train 1.5005 bpc lr 4.75e-05 4238s
+step 21200 chars 347340800 train 1.5007 bpc lr 4.22e-05 4278s
+step 21400 chars 350617600 train 1.5004 bpc lr 3.72e-05 4318s
+step 21600 chars 353894400 train 1.4989 bpc lr 3.24e-05 4358s
+step 21800 chars 357171200 train 1.5018 bpc lr 2.80e-05 4398s
+step 22000 chars 360448000 train 1.4985 bpc lr 2.39e-05 4439s
+step 22000 val 1.5409 bpc
+step 22200 chars 363724800 train 1.4988 bpc lr 2.02e-05 4481s
+step 22400 chars 367001600 train 1.5021 bpc lr 1.67e-05 4521s
+step 22600 chars 370278400 train 1.4979 bpc lr 1.36e-05 4561s
+step 22800 chars 373555200 train 1.4939 bpc lr 1.08e-05 4601s
+step 23000 chars 376832000 train 1.4981 bpc lr 8.27e-06 4641s
+step 23200 chars 380108800 train 1.4968 bpc lr 6.10e-06 4682s
+step 23400 chars 383385600 train 1.4946 bpc lr 4.26e-06 4722s
+step 23600 chars 386662400 train 1.4982 bpc lr 2.75e-06 4762s
+step 23800 chars 389939200 train 1.4922 bpc lr 1.56e-06 4802s
+step 24000 chars 393216000 train 1.4956 bpc lr 7.13e-07 4842s
+step 24000 val 1.5371 bpc
+step 24200 chars 396492800 train 1.4979 bpc lr 1.91e-07 4884s
+step 24400 chars 399769600 train 1.4936 bpc lr 9.31e-10 4924s
+done: prequential 1.6780 bpc, val 1.5286 bpc, 4946s, 1.82 GB
+en 10M: 9977649 parameters, 24414 steps, 399998976 chars
+step 200 chars 3276800 train 3.8252 bpc lr 4.00e-04 44s
+step 400 chars 6553600 train 3.5253 bpc lr 7.99e-04 84s
+step 600 chars 9830400 train 3.0532 bpc lr 9.99e-04 124s
+step 800 chars 13107200 train 2.5561 bpc lr 9.97e-04 164s
+step 1000 chars 16384000 train 2.3218 bpc lr 9.96e-04 204s
+step 1200 chars 19660800 train 2.1755 bpc lr 9.94e-04 245s
+step 1400 chars 22937600 train 2.0926 bpc lr 9.92e-04 285s
+step 1600 chars 26214400 train 2.0427 bpc lr 9.89e-04 325s
+step 1800 chars 29491200 train 2.0010 bpc lr 9.87e-04 365s
+step 2000 chars 32768000 train 1.9762 bpc lr 9.84e-04 405s
+step 2000 val 2.0575 bpc
+step 2200 chars 36044800 train 1.9477 bpc lr 9.80e-04 447s
+step 2400 chars 39321600 train 1.9286 bpc lr 9.76e-04 487s
+step 2600 chars 42598400 train 1.9139 bpc lr 9.72e-04 527s
+step 2800 chars 45875200 train 1.8943 bpc lr 9.68e-04 568s
+step 3000 chars 49152000 train 1.8829 bpc lr 9.63e-04 608s
+step 3200 chars 52428800 train 1.8643 bpc lr 9.58e-04 648s
+step 3400 chars 55705600 train 1.8554 bpc lr 9.53e-04 688s
+step 3600 chars 58982400 train 1.8501 bpc lr 9.47e-04 728s
+step 3800 chars 62259200 train 1.8344 bpc lr 9.41e-04 769s
+step 4000 chars 65536000 train 1.8236 bpc lr 9.35e-04 809s
+step 4000 val 1.9190 bpc
+step 4200 chars 68812800 train 1.8143 bpc lr 9.29e-04 851s
+step 4400 chars 72089600 train 1.8080 bpc lr 9.22e-04 891s
+step 4600 chars 75366400 train 1.8036 bpc lr 9.15e-04 931s
+step 4800 chars 78643200 train 1.7972 bpc lr 9.08e-04 972s
+step 5000 chars 81920000 train 1.7886 bpc lr 9.00e-04 1012s
+step 5200 chars 85196800 train 1.7824 bpc lr 8.92e-04 1052s
+step 5400 chars 88473600 train 1.7734 bpc lr 8.84e-04 1092s
+step 5600 chars 91750400 train 1.7704 bpc lr 8.76e-04 1132s
+step 5800 chars 95027200 train 1.7717 bpc lr 8.67e-04 1172s
+step 6000 chars 98304000 train 1.7653 bpc lr 8.58e-04 1213s
+step 6000 val 1.8513 bpc
+step 6200 chars 101580800 train 1.7560 bpc lr 8.49e-04 1255s
+step 6400 chars 104857600 train 1.7541 bpc lr 8.40e-04 1295s
+step 6600 chars 108134400 train 1.7469 bpc lr 8.30e-04 1335s
+step 6800 chars 111411200 train 1.7430 bpc lr 8.21e-04 1375s
+step 7000 chars 114688000 train 1.7410 bpc lr 8.11e-04 1416s
+step 7200 chars 117964800 train 1.7326 bpc lr 8.00e-04 1456s
+step 7400 chars 121241600 train 1.7280 bpc lr 7.90e-04 1496s
+step 7600 chars 124518400 train 1.7276 bpc lr 7.79e-04 1536s
+step 7800 chars 127795200 train 1.7203 bpc lr 7.69e-04 1576s
+step 8000 chars 131072000 train 1.7249 bpc lr 7.58e-04 1616s
+step 8000 val 1.8144 bpc
+step 8200 chars 134348800 train 1.7140 bpc lr 7.47e-04 1658s
+step 8400 chars 137625600 train 1.7034 bpc lr 7.35e-04 1699s
+step 8600 chars 140902400 train 1.7049 bpc lr 7.24e-04 1739s
+step 8800 chars 144179200 train 1.7032 bpc lr 7.12e-04 1779s
+step 9000 chars 147456000 train 1.7021 bpc lr 7.01e-04 1819s
+step 9200 chars 150732800 train 1.6928 bpc lr 6.89e-04 1859s
+step 9400 chars 154009600 train 1.6950 bpc lr 6.77e-04 1899s
+step 9600 chars 157286400 train 1.6908 bpc lr 6.65e-04 1939s
+step 9800 chars 160563200 train 1.6834 bpc lr 6.52e-04 1980s
+step 10000 chars 163840000 train 1.6838 bpc lr 6.40e-04 2020s
+step 10000 val 1.7826 bpc
+step 10200 chars 167116800 train 1.6865 bpc lr 6.28e-04 2062s
+step 10400 chars 170393600 train 1.6769 bpc lr 6.15e-04 2102s
+step 10600 chars 173670400 train 1.6751 bpc lr 6.03e-04 2142s
+step 10800 chars 176947200 train 1.6741 bpc lr 5.90e-04 2182s
+step 11000 chars 180224000 train 1.6670 bpc lr 5.77e-04 2223s
+step 11200 chars 183500800 train 1.6670 bpc lr 5.65e-04 2263s
+step 11400 chars 186777600 train 1.6610 bpc lr 5.52e-04 2303s
+step 11600 chars 190054400 train 1.6619 bpc lr 5.39e-04 2343s
+step 11800 chars 193331200 train 1.6607 bpc lr 5.26e-04 2383s
+step 12000 chars 196608000 train 1.6589 bpc lr 5.13e-04 2424s
+step 12000 val 1.7486 bpc
+step 12200 chars 199884800 train 1.6551 bpc lr 5.01e-04 2466s
+step 12400 chars 203161600 train 1.6493 bpc lr 4.88e-04 2506s
+step 12600 chars 206438400 train 1.6463 bpc lr 4.75e-04 2546s
+step 12800 chars 209715200 train 1.6407 bpc lr 4.62e-04 2586s
+step 13000 chars 212992000 train 1.6481 bpc lr 4.49e-04 2626s
+step 13200 chars 216268800 train 1.6446 bpc lr 4.36e-04 2666s
+step 13400 chars 219545600 train 1.6378 bpc lr 4.24e-04 2707s
+step 13600 chars 222822400 train 1.6348 bpc lr 4.11e-04 2729s
+step 13800 chars 226099200 train 1.6347 bpc lr 3.98e-04 2748s
+step 14000 chars 229376000 train 1.6272 bpc lr 3.86e-04 2783s
+step 14000 val 1.7251 bpc
+step 14200 chars 232652800 train 1.6311 bpc lr 3.73e-04 2825s
+step 14400 chars 235929600 train 1.6233 bpc lr 3.61e-04 2865s
+step 14600 chars 239206400 train 1.6196 bpc lr 3.49e-04 2905s
+step 14800 chars 242483200 train 1.6245 bpc lr 3.36e-04 2946s
+step 15000 chars 245760000 train 1.6194 bpc lr 3.24e-04 2986s
+step 15200 chars 249036800 train 1.6175 bpc lr 3.12e-04 3026s
+step 15400 chars 252313600 train 1.6160 bpc lr 3.00e-04 3066s
+step 15600 chars 255590400 train 1.6121 bpc lr 2.89e-04 3106s
+step 15800 chars 258867200 train 1.6102 bpc lr 2.77e-04 3146s
+step 16000 chars 262144000 train 1.6108 bpc lr 2.66e-04 3186s
+step 16000 val 1.7018 bpc
+step 16200 chars 265420800 train 1.6053 bpc lr 2.54e-04 3228s
+step 16400 chars 268697600 train 1.6037 bpc lr 2.43e-04 3268s
+step 16600 chars 271974400 train 1.5979 bpc lr 2.32e-04 3308s
+step 16800 chars 275251200 train 1.6009 bpc lr 2.21e-04 3348s
+step 17000 chars 278528000 train 1.5940 bpc lr 2.11e-04 3388s
+step 17200 chars 281804800 train 1.5939 bpc lr 2.00e-04 3429s
+step 17400 chars 285081600 train 1.5897 bpc lr 1.90e-04 3469s
+step 17600 chars 288358400 train 1.5897 bpc lr 1.80e-04 3509s
+step 17800 chars 291635200 train 1.5954 bpc lr 1.70e-04 3549s
+step 18000 chars 294912000 train 1.5846 bpc lr 1.61e-04 3589s
+step 18000 val 1.6812 bpc
+step 18200 chars 298188800 train 1.5814 bpc lr 1.52e-04 3631s
+step 18400 chars 301465600 train 1.5853 bpc lr 1.42e-04 3671s
+step 18600 chars 304742400 train 1.5777 bpc lr 1.34e-04 3711s
+step 18800 chars 308019200 train 1.5756 bpc lr 1.25e-04 3751s
+step 19000 chars 311296000 train 1.5763 bpc lr 1.17e-04 3792s
+step 19200 chars 314572800 train 1.5750 bpc lr 1.08e-04 3832s
+step 19400 chars 317849600 train 1.5739 bpc lr 1.01e-04 3872s
+step 19600 chars 321126400 train 1.5704 bpc lr 9.29e-05 3912s
+step 19800 chars 324403200 train 1.5675 bpc lr 8.56e-05 3952s
+step 20000 chars 327680000 train 1.5684 bpc lr 7.85e-05 3992s
+step 20000 val 1.6645 bpc
+step 20200 chars 330956800 train 1.5695 bpc lr 7.18e-05 4034s
+step 20400 chars 334233600 train 1.5667 bpc lr 6.53e-05 4075s
+step 20600 chars 337510400 train 1.5652 bpc lr 5.90e-05 4115s
+step 20800 chars 340787200 train 1.5685 bpc lr 5.31e-05 4155s
+step 21000 chars 344064000 train 1.5625 bpc lr 4.75e-05 4195s
+step 21200 chars 347340800 train 1.5662 bpc lr 4.22e-05 4235s
+step 21400 chars 350617600 train 1.5640 bpc lr 3.72e-05 4275s
+step 21600 chars 353894400 train 1.5667 bpc lr 3.24e-05 4315s
+step 21800 chars 357171200 train 1.5589 bpc lr 2.80e-05 4355s
+step 22000 chars 360448000 train 1.5612 bpc lr 2.39e-05 4396s
+step 22000 val 1.6539 bpc
+step 22200 chars 363724800 train 1.5623 bpc lr 2.02e-05 4438s
+step 22400 chars 367001600 train 1.5571 bpc lr 1.67e-05 4478s
+step 22600 chars 370278400 train 1.5570 bpc lr 1.36e-05 4518s
+step 22800 chars 373555200 train 1.5554 bpc lr 1.08e-05 4558s
+step 23000 chars 376832000 train 1.5517 bpc lr 8.27e-06 4598s
+step 23200 chars 380108800 train 1.5548 bpc lr 6.10e-06 4639s
+step 23400 chars 383385600 train 1.5541 bpc lr 4.26e-06 4679s
+step 23600 chars 386662400 train 1.5550 bpc lr 2.75e-06 4719s
+step 23800 chars 389939200 train 1.5532 bpc lr 1.56e-06 4759s
+step 24000 chars 393216000 train 1.5553 bpc lr 7.13e-07 4799s
+step 24000 val 1.6506 bpc
+step 24200 chars 396492800 train 1.5519 bpc lr 1.91e-07 4842s
+step 24400 chars 399769600 train 1.5562 bpc lr 9.31e-10 4882s
+done: prequential 1.7368 bpc, val 1.5649 bpc, 4904s, 1.82 GB
+en_10M_on_pt 3.0479 bpc, mean entropy 2.6711
+en_10M_on_en 1.5589 bpc, mean entropy 1.5615
+pt_10M_on_pt 1.5227 bpc, mean entropy 1.5243
+pt_10M_on_en 2.3112 bpc, mean entropy 2.1977
+{
+ "model": "runs/pt_10M.pt",
+ "text": "data/pt/test.txt",
+ "chars": 1000000,
+ "streams": 512,
+ "round_trip_ok": true,
+ "file_bytes": 186210,
+ "header_bytes": 2056,
+ "real_bpc": 1.48968,
+ "ideal_bpc": 1.470930077472498,
+ "encode_seconds": 2287.1346328258514,
+ "decode_seconds": 2272.3876407146454
+}
+{
+ "model": "runs/en_10M.pt",
+ "text": "data/en/test.txt",
+ "chars": 1000000,
+ "streams": 512,
+ "round_trip_ok": true,
+ "file_bytes": 189510,
+ "header_bytes": 2056,
+ "real_bpc": 1.51608,
+ "ideal_bpc": 1.4972438162997561,
+ "encode_seconds": 2288.19256567955,
+ "decode_seconds": 1571.1792812347412
+}
+0.1M pt text: D = 1.655 bits/char, std 2.763; {'0.1': {'n_stein': 2.0, 'n_clt': 4.6, 'n_measured': 9}, '0.01': {'n_stein': 4.0, 'n_clt': 15.1, 'n_measured': None}, '0.001': {'n_stein': 6.0, 'n_clt': 26.6, 'n_measured': None}}
+0.1M en text: D = 1.052 bits/char, std 1.992; {'0.1': {'n_stein': 3.2, 'n_clt': 5.9, 'n_measured': 9}, '0.01': {'n_stein': 6.3, 'n_clt': 19.4, 'n_measured': 208}, '0.001': {'n_stein': 9.5, 'n_clt': 34.2, 'n_measured': None}}
+1M pt text: D = 1.634 bits/char, std 2.682; {'0.1': {'n_stein': 2.0, 'n_clt': 4.4, 'n_measured': 7}, '0.01': {'n_stein': 4.1, 'n_clt': 14.6, 'n_measured': None}, '0.001': {'n_stein': 6.1, 'n_clt': 25.7, 'n_measured': None}}
+1M en text: D = 0.887 bits/char, std 1.807; {'0.1': {'n_stein': 3.7, 'n_clt': 6.8, 'n_measured': 8}, '0.01': {'n_stein': 7.5, 'n_clt': 22.5, 'n_measured': 118}, '0.001': {'n_stein': 11.2, 'n_clt': 39.6, 'n_measured': None}}
+10M pt text: D = 1.530 bits/char, std 2.307; {'0.1': {'n_stein': 2.2, 'n_clt': 3.7, 'n_measured': 7}, '0.01': {'n_stein': 4.3, 'n_clt': 12.3, 'n_measured': None}, '0.001': {'n_stein': 6.5, 'n_clt': 21.7, 'n_measured': None}}
+10M en text: D = 0.751 bits/char, std 1.611; {'0.1': {'n_stein': 4.4, 'n_clt': 7.6, 'n_measured': 6}, '0.01': {'n_stein': 8.8, 'n_clt': 24.9, 'n_measured': 101}, '0.001': {'n_stein': 13.3, 'n_clt': 43.9, 'n_measured': None}}
+ALL DONE
