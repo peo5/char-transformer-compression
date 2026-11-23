@@ -1,14 +1,14 @@
-"""Step 7: description lengths. Model shared (like a dictionary) vs two-part (weights + code) vs prequential.
+"""Description lengths: four ways to count the bits of the same model (RESULTS.md, section 8).
 
-Usage: python mdl.py RUNS_DIR OUT_JSON
+Usage: python src/mdl.py RUNS_DIR OUT_JSON
 
-For each model, in bits per character of the text being described:
-  shared        test cross-entropy (the receiver already has the model)
-  two_part_test (32 * params + 10M * test bpc) / 10M     - ship fp32 weights with the 10 MB test file
-  two_part_train (32 * params + N * val bpc) / N         - same for the N = 400M training chars; the final
-                                                          model's train loss is taken as its val loss (one epoch,
-                                                          every training char seen once, so no overfitting)
-  prequential   sum of losses before each update / N     - no charge for weights at all
+For each model, all four numbers are in bits per character of the text being described:
+  shared          the test cross-entropy; the receiver already has the model, like a dictionary
+  two_part_test   (32 * params + 10M * test bpc) / 10M; the 32-bit weights are sent with the 10 MB test file
+  two_part_train  (32 * params + N * val bpc) / N, the same for the N = 400M training characters. We use the
+                  final validation loss as the training loss: with one epoch, the model saw each training
+                  character only once, so it could not overfit them.
+  prequential     the sum of the losses measured before each update, divided by N; the weights cost nothing
 """
 import json, sys
 from pathlib import Path

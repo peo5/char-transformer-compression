@@ -1,19 +1,23 @@
-"""Step 1: Wikipedia parquet -> normalized ASCII text, split train/val/test by article.
+"""Turn the Wikipedia parquet files into normalized ASCII text and split it by article (RESULTS.md, section 1).
 
-Usage: python prepare_data.py RAW_DIR OUT_DIR
-  RAW_DIR holds 20231101.pt/*.parquet and 20231101.en/*.parquet (from download.sh).
-  Writes OUT_DIR/{pt,en}/{train,val,test}.txt and OUT_DIR/stats.json.
+Usage: python src/prepare_data.py RAW_DIR OUT_DIR
 
-Recipe (lossy on purpose):
-  - NFKD, drop combining marks (accents; c-cedilla -> c), lower case, a few quote/dash
-    look-alikes mapped to ASCII, every character outside ALPHABET dropped.
-  - Spaces collapsed, blank lines removed: one paragraph per line, articles separated by one blank line.
-  - Articles shorter than MIN_CHARS after normalization are dropped (stubs, most bot articles).
-  - Exact duplicates dropped, and near duplicates: two articles that are equal once every digit is
-    replaced by 0 (templated bot text differing only in numbers) keep only the first.
-  - Each article gets a pseudo-random key from its id; sorted by that key, articles go to test until
-    TEST_CHARS, then val until VAL_CHARS, then train; every split has exactly the same size in both
-    languages (the last article of a split is cut).
+RAW_DIR holds 20231101.pt/*.parquet and 20231101.en/*.parquet, as downloaded by download.sh. The script writes
+OUT_DIR/{pt,en}/{train,val,test}.txt and OUT_DIR/stats.json.
+
+The normalization loses information on purpose:
+  - NFKD Unicode normalization splits each letter from its accent, and the accents are dropped (c-cedilla
+    becomes c). Text is lower-cased, a few look-alike quotes and dashes become ASCII, and every character
+    outside ALPHABET is dropped.
+  - Runs of spaces become one space and blank lines are removed. The output has one paragraph per line, and one
+    blank line between articles.
+  - Articles shorter than MIN_CHARS after normalization are dropped. Most of them are stubs or bot articles.
+  - Exact duplicates are dropped. So are near duplicates: two articles that are equal once every digit becomes 0
+    (template text from bots that differs only in numbers). Only the first one is kept.
+
+To split the data, each article gets a pseudo-random key from its id, and the articles are sorted by that key.
+They go to the test set until it has TEST_CHARS characters, then to the validation set until VAL_CHARS, then to
+the training set. Each split has exactly the same size in both languages, so the last article of a split is cut.
 """
 import hashlib, json, re, sys, unicodedata
 from pathlib import Path

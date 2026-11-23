@@ -1,13 +1,13 @@
-"""Step 3: train one character transformer for one epoch over train.txt, logging bits/char.
+"""Train one character transformer for one epoch over train.txt, logging bits per character (RESULTS.md, section 3).
 
-Usage: python train.py LANG SIZE DATA_DIR OUT_DIR      e.g. python train.py pt 1M data runs
+Usage: python src/train.py LANG SIZE DATA_DIR OUT_DIR      e.g. python src/train.py pt 1M data runs
 
-The epoch visits every non-overlapping 256-char chunk of train.txt once, in a random order (seed 0).
-Each batch is scored BEFORE the update on it, so the sum of those losses is a prequential code length
-of the training data: a decoder that knows the seed, the architecture and the training recipe can
-replay the same updates, so no bits are charged for the weights.
+The epoch visits every 256-character chunk of train.txt once (the chunks do not overlap), in a random order fixed
+by seed 0. Each batch is scored BEFORE the model is updated on it. The sum of those losses is therefore a
+prequential code length of the training data. A decoder that knows the seed, the architecture and the training
+recipe can replay the same updates, so no bits are charged for the weights.
 
-Writes OUT_DIR/LANG_SIZE.pt (weights) and OUT_DIR/LANG_SIZE.log.json (curves and totals).
+It writes OUT_DIR/LANG_SIZE.pt (the weights) and OUT_DIR/LANG_SIZE.log.json (the learning curves and totals).
 """
 import json, math, sys, time
 from pathlib import Path

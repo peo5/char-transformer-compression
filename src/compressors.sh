@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Step 2b: general-purpose compressors on the normalized test files, in bits per character.
-# Usage: bash compressors.sh DATA_DIR > compressors.tsv
+# General-purpose compressors (gzip, xz, zstd) on the normalized test files, in bits per character
+# (RESULTS.md, section 2).
+# Usage: bash src/compressors.sh DATA_DIR > compressors.tsv
 echo -e "lang\tcompressor\tchars\tbytes\tbits_per_char"
 for lang in pt en; do
   f=$1/$lang/test.txt

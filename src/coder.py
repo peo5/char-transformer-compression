@@ -1,15 +1,19 @@
-"""Step 4: arithmetic coding driven by a trained model, with a bit-exact round trip.
+"""Arithmetic coding driven by a trained model, with a bit-exact round trip (RESULTS.md, section 5).
 
-Usage: python coder.py MODEL.pt SIZE TEXT_FILE N_CHARS OUT_PREFIX
-  Codes the first N_CHARS of TEXT_FILE, writes OUT_PREFIX.ac, decodes it again and checks equality.
-  Prints real size, ideal size (sum of -log2 of the quantized probabilities) and timings as JSON.
+Usage: python src/coder.py MODEL.pt SIZE TEXT_FILE N_CHARS OUT_PREFIX
 
-Context policy (shared by encoder and decoder): the text is cut into S contiguous streams that advance
-together, one character per step. Stream s predicts its next character from a window of its last 256
-characters ("\n" stands before the first one); while fewer than 256 exist the window is right-padded,
-which does not change the prediction because attention is causal. Every step is one forward pass of
-shape (S, 256) in float32 with deterministic algorithms, the same code path when encoding and decoding,
-so both sides see bit-identical integer frequencies.
+The script encodes the first N_CHARS characters of TEXT_FILE into OUT_PREFIX.ac. It then decodes that file and
+checks that the result equals the original text. It prints a JSON object with the real file size, the ideal size
+(the sum of -log2 of the quantized probabilities) and the encoding and decoding times.
+
+The encoder and decoder must see exactly the same probabilities, so they share one way of giving the model its
+context. The text is cut into S contiguous streams that advance together, one character per step. Each stream
+predicts its next character from a window with its last 256 characters, and a newline character stands before the
+first one. While a stream has fewer than 256 characters, the window is padded on the right. The padding does not
+change the prediction, because attention is causal: a position never looks at later positions.
+
+Every step is one forward pass on a tensor of shape (S, 256), in float32 and with deterministic algorithms. The
+encoder and the decoder run this same code, so they compute bit-identical integer frequencies.
 """
 import json, math, os, struct, sys, time
 import numpy as np

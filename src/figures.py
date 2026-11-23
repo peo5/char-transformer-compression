@@ -1,7 +1,8 @@
-"""Make every figure from the result files (labels in pt-BR). Each function writes one PNG into FIG_DIR.
+"""Make every figure from the result files, with labels in Portuguese. Each function writes one PNG into FIG_DIR.
 
-Usage: python figures.py RESULTS_DIR FIG_DIR
-  RESULTS_DIR holds ngram.json, compressors.tsv and runs/ (the logs, eval/summary.json, lid.json).
+Usage: python src/figures.py RESULTS_DIR FIG_DIR
+
+RESULTS_DIR must hold ngram.json, compressors.tsv and runs/ (the training logs, eval/summary.json and lid.json).
 """
 import csv, json, sys
 from pathlib import Path

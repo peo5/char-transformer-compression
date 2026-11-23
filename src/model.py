@@ -1,4 +1,5 @@
-"""A minimal decoder-only transformer over characters, plus the data helpers every step shares."""
+"""A minimal decoder-only transformer over characters, plus the data helpers that every script shares.
+"""
 import math
 import numpy as np
 import torch

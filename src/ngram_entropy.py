@@ -1,11 +1,14 @@
-"""Step 2a: the entropy ladder. Plug-in conditional entropy H(X_n | k previous chars), k = 0..5.
+"""The entropy ladder: conditional entropy from n-gram counts (RESULTS.md, section 2).
 
-Usage: python ngram_entropy.py DATA_DIR OUT_JSON
-  Uses the first N chars of DATA_DIR/{pt,en}/train.txt for N = 10M and 100M.
+Usage: python src/ngram_entropy.py DATA_DIR OUT_JSON
 
-H(X_n | X_{n-k}..X_{n-1}) = H(k+1-gram) - H(k-gram), each H from empirical counts (plug-in).
-The plug-in estimate is biased LOW when the number of distinct contexts is not small compared to N,
-so comparing N = 10M and 100M shows where the high-k numbers stop being trustworthy.
+The script counts n-grams (sequences of n characters) in the first N characters of DATA_DIR/{pt,en}/train.txt,
+for N = 10M and N = 100M. For k = 0..5 it computes the entropy of a character given the k characters before it:
+H(X_n | X_{n-k}..X_{n-1}) = H(k+1-gram) - H(k-gram).
+
+Each entropy uses the observed frequencies as if they were the true probabilities (the "plug-in" estimate). This
+estimate comes out too LOW when the number of distinct contexts is not small compared with N. Comparing N = 10M
+with N = 100M shows from which k on the numbers stop being trustworthy.
 """
 import json, sys
 import numpy as np

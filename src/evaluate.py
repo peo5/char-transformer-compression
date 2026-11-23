@@ -1,11 +1,15 @@
-"""Steps 3 (calibration, loss by position) and 5 (cross-language matrix): score test sets with trained models.
+"""Score the test sets with every trained model (RESULTS.md, sections 4 and 6).
 
-Usage: python evaluate.py DATA_DIR RUNS_DIR
-  For every RUNS_DIR/{lang}_{size}.pt and every test language, cuts DATA_DIR/{lang}/test.txt into
-  non-overlapping 257-char windows (stride 256), each scored with no context from before it: position i
-  predicts char i+1 from chars 0..i, so position i has i+1 chars of context. Float32, no AMP.
-  Writes RUNS_DIR/eval/{model}_on_{test}.npy  (bits per char, float32, shape chunks x 256) and
-           RUNS_DIR/eval/summary.json         (cross-entropy, mean predicted entropy, both per position).
+Usage: python src/evaluate.py DATA_DIR RUNS_DIR
+
+For every model RUNS_DIR/{lang}_{size}.pt and every test language, the script cuts DATA_DIR/{lang}/test.txt into
+windows of 257 characters that do not overlap (a stride of 256). Each window is scored with no context from before
+it. Position i predicts character i+1 from characters 0..i, so it has i+1 characters of context. All computations
+use float32, without automatic mixed precision (AMP).
+
+It writes two kinds of files:
+  RUNS_DIR/eval/{model}_on_{test}.npy   bits per character, float32, one row of 256 values per window
+  RUNS_DIR/eval/summary.json            cross-entropy and mean predicted entropy, overall and per position
 """
 import json, sys
 from pathlib import Path

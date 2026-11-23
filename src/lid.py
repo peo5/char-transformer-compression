@@ -1,14 +1,17 @@
-"""Step 6: language identification as a prediction we can test.
+"""Language identification: a prediction we can test (RESULTS.md, section 7).
 
-Usage: python lid.py RUNS_DIR OUT_JSON      (needs the .npy files written by evaluate.py)
+Usage: python src/lid.py RUNS_DIR OUT_JSON      (needs the .npy files written by evaluate.py)
 
-For a snippet in language A, the per-character log-likelihood ratio is L_i = log2 q_A(x_i) - log2 q_B(x_i)
-(B = the other language). Classify the snippet as A when sum_i L_i > 0.
-From the first half of the test chunks we measure D = mean L_i and s^2 = var L_i and predict the snippet
-length n needed for error eps:
-  Stein / large deviations:  n ~ log2(1/eps) / D
-  CLT (L_i treated as iid):   n ~ (z_eps * s / D)^2,  z_eps = normal quantile of 1 - eps
-The second half of the chunks (disjoint text) gives the measured error of the rule at every n = 1..256.
+Take a snippet written in language A, and let B be the other language. For each character, the log-likelihood
+ratio is L_i = log2 q_A(x_i) - log2 q_B(x_i). The rule classifies the snippet as A when the sum of the L_i is
+positive.
+
+On the first half of the test chunks, the script measures the mean D and the variance s^2 of L_i. From them it
+predicts the snippet length n needed to reach an error rate eps, in two ways:
+  Stein's lemma (large deviations):              n ~ log2(1/eps) / D
+  central limit theorem (L_i treated as iid):    n ~ (z_eps * s / D)^2, where z_eps is the normal quantile of 1 - eps
+The second half of the chunks is different text. On it, the script measures the real error of the rule for every
+n from 1 to 256.
 """
 import json, sys
 from pathlib import Path
