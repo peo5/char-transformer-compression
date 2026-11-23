@@ -46,10 +46,10 @@ def entropy_ladder(res, out):
             if key in summary:
                 ax.axhline(summary[key]["bpc"], color=COLOR[lang], linestyle=STYLE[size], linewidth=1)
                 ax.text(0.05, summary[key]["bpc"], f"transformer {size}", va="bottom", fontsize=8, color="#52514e")
-        ax.set_title(f"{lang}: escada de entropia, compressores e modelos")
+        ax.set_title(f"{lang}: n-gramas, compressores e modelos")
         ax.set_xlabel("k (caracteres de contexto)")
         ax.legend(fontsize=8, loc="upper right")
-    axes[0].set_ylabel("bits por caractere")
+    axes[0].set_ylabel("bits por caractere (bpc)")
     save(fig, out / "entropy_ladder.png")
 
 
@@ -64,15 +64,15 @@ def training_curves(res, out):
             c = np.array(log["curve"])
             v = np.array(log["val_curve"])
             ax.plot(c[:, 1] / 1e6, c[:, 2], STYLE[size], color=COLOR[lang], alpha=0.5,
-                    label=f"{size}: lotes de treino antes da atualização (prequencial)")
+                    label=f"{size}: batches de treino antes da atualização (prequential)")
             ax.plot(v[:, 1] / 1e6, v[:, 2], STYLE[size], marker=MARKER[size], markersize=4, color=COLOR[lang],
                     label=f"{size}: validação, primeiros 0,5M caracteres")
         ax.set_xscale("log")
         ax.set_ylim(top=3.5)
-        ax.set_title(f"{lang}: bits por caractere durante a única época de treino")
+        ax.set_title(f"{lang}: bpc durante a única época de treino")
         ax.set_xlabel("caracteres de treino vistos (milhões)")
         ax.legend(fontsize=7)
-    axes[0].set_ylabel("bits por caractere")
+    axes[0].set_ylabel("bits por caractere (bpc)")
     save(fig, out / "training_curves.png")
 
 
@@ -89,10 +89,10 @@ def by_position(res, out):
             ax.plot(pos, summary[key]["entropy_by_position"], STYLE[size], color="#8a8984", linewidth=1,
                     label=f"{size} entropia média prevista")
         ax.set_xscale("log")
-        ax.set_title(f"teste {lang}: perda por tamanho do contexto")
+        ax.set_title(f"teste {lang}: loss por tamanho do contexto")
         ax.set_xlabel("caracteres de contexto")
         ax.legend(fontsize=7)
-    axes[0].set_ylabel("bits por caractere")
+    axes[0].set_ylabel("bits por caractere (bpc)")
     save(fig, out / "loss_by_position.png")
 
 

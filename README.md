@@ -1,42 +1,43 @@
-# Compressão = previsão: transformers minúsculos em nível de caractere
+# Compressão é previsão: transformers character-level na Wikipédia
 
-Um modelo de linguagem treinado com perda de entropia cruzada é um compressor. A codificação aritmética, guiada pelas
-probabilidades q(x) do modelo, transforma −log2 q(x) bits por símbolo em um arquivo de verdade. Escrevemos
-transformers pequenos do zero em PyTorch, treinamos esses modelos na Wikipédia em português e em inglês e medimos o
-processo de ponta a ponta.
+Um modelo de linguagem treinado com entropia cruzada também é um compressor. Se o modelo dá probabilidade q(x) ao
+próximo caractere, um codificador aritmético gasta cerca de −log2 q(x) bits para guardá-lo. Ou seja, o arquivo
+comprimido fica com o tamanho da loss do modelo.
 
-**Os resultados completos, com tabelas, figuras e a descrição de cada medida, estão em [RESULTS.md](RESULTS.md).**
+Neste projeto, treinamos transformers pequenos do zero, em PyTorch, com a Wikipédia em português e em inglês, e
+verificamos essa ideia na prática: do treino até o arquivo comprimido, e de volta.
+
+**Os resultados completos, com tabelas, figuras e a explicação de cada medida, estão em [RESULTS.md](RESULTS.md).**
 
 ## Em poucas linhas
 
-Bits por caractere no conjunto de teste (10 milhões de caracteres por língua, alfabeto de 49 símbolos):
+Bits por caractere (bpc) no conjunto de teste, com 10 milhões de caracteres por língua e um alfabeto de 49 símbolos:
 
 | | gzip -9 | xz -9e | modelo 0,1M | modelo 1M | modelo 10M |
 |---|---|---|---|---|---|
 | português | 2,89 | 2,21 | 2,37 | 1,80 | 1,52 |
 | inglês | 2,87 | 2,19 | 2,43 | 1,85 | 1,56 |
 
-- O codificador aritmético recupera o texto original bit a bit. O tamanho real do arquivo fica cerca de 0,02 bit por
-  caractere acima da soma ideal Σ −log2 q.
-- Usar o modelo da outra língua custa caro, e o custo não é simétrico. Com o modelo de 10M, o texto em inglês
-  codificado pelo modelo português custa 2,31 bits por caractere. O texto em português codificado pelo modelo inglês
-  custa 3,05.
-- Também medimos a calibração dos modelos, a perda por posição no contexto, a identificação de língua (uma previsão
-  pelo lema de Stein comparada com o erro medido) e o comprimento de descrição (modelo compartilhado, código em duas
-  partes e código prequencial).
+- **A compressão funciona de verdade:** o codificador aritmético recupera o texto original bit a bit, e o arquivo
+  fica só cerca de 0,02 bpc acima do tamanho ideal Σ −log2 q.
+- **Usar o modelo da outra língua custa caro, e o custo não é simétrico:** com os modelos de 10M, o inglês codificado
+  pelo modelo português custa 2,31 bpc, e o português codificado pelo modelo inglês custa 3,05 bpc.
+- **Também medimos:** calibração, loss por posição no contexto, identificação de língua (uma previsão pelo lema de
+  Stein comparada com o erro medido) e comprimento de descrição (modelo compartilhado, two-part code e prequential
+  code length).
 
-## Como reproduzir
+## Como rodar
 
-É preciso ter o [uv](https://docs.astral.sh/uv/), um gerenciador de ambientes Python, uma GPU com CUDA e cerca de
-5 GB de disco. Usamos uma RTX 3060 de 12 GB, compartilhada com outros trabalhos. O modelo de 10M leva cerca de 1h20
-por língua; os de 0,1M e 1M levam minutos.
+Você vai precisar do [uv](https://docs.astral.sh/uv/) para criar o ambiente Python, de uma GPU com CUDA e de cerca de
+5 GB de disco. Nós usamos uma RTX 3060 de 12 GB, compartilhada com outros trabalhos. O modelo de 10M leva cerca de
+1h20 por língua; os de 0,1M e 1M levam minutos.
 
-Rode os comandos abaixo na raiz do repositório, nesta ordem:
+Rode os comandos na raiz do repositório, nesta ordem:
 
 ```bash
 bash src/setup.sh                                   # cria .venv com torch, numpy, pyarrow e matplotlib
-bash src/download.sh                                # baixa a Wikipédia de 2023-11-01 (parquet) em raw/
-.venv/bin/python src/prepare_data.py raw data       # normaliza e divide treino/validação/teste por artigo
+bash src/download.sh                                # baixa os dumps da Wikipédia de 2023-11-01 (parquet) em raw/
+.venv/bin/python src/prepare_data.py raw data       # normaliza o texto e divide treino/validação/teste por artigo
 .venv/bin/python src/ngram_entropy.py data results/ngram.json
 bash src/compressors.sh data > results/compressors.tsv
 bash src/run_gpu.sh > run_gpu.log 2>&1              # treina 0,1M/1M/10M em pt e en, avalia, codifica, identifica língua
@@ -45,26 +46,26 @@ bash src/run_gpu.sh > run_gpu.log 2>&1              # treina 0,1M/1M/10M em pt e
 bash src/make_results.sh                            # reescreve as tabelas de RESULTS.md a partir de results/
 ```
 
-Há também uma verificação opcional no text8, um conjunto padrão de texto em inglês: rode
+Há também uma verificação de sanidade opcional no text8, um benchmark clássico de texto em inglês: rode
 `bash src/text8_data.sh data` e depois `.venv/bin/python src/train.py text8 1M data runs`.
 
-## Arquivos
+## Estrutura
 
-Todos os scripts ficam em `src/`, um script por etapa, com cerca de 1.000 linhas no total.
+Todo o código fica em `src/`, com um script por etapa e cerca de 1.000 linhas no total.
 
-| arquivo | o que faz |
-|---|---|
-| `download.sh`, `prepare_data.py` | baixam a Wikipédia e produzem o texto normalizado e os conjuntos de treino, validação e teste |
-| `ngram_entropy.py`, `compressors.sh` | calculam a escada de entropia por n-gramas e rodam gzip, xz e zstd |
-| `model.py`, `train.py` | definem o transformer e o treinam por uma época, medindo o comprimento de código prequencial |
-| `evaluate.py` | mede a entropia cruzada no teste, a matriz entre línguas, a calibração e a perda por posição |
-| `coder.py` | implementa o codificador aritmético e testa a ida e volta bit a bit |
-| `lid.py` | faz a identificação de língua: a previsão e a medida |
-| `mdl.py` | calcula o comprimento de descrição |
-| `tables.py`, `figures.py`, `make_results.sh` | geram RESULTS.md e as figuras a partir de `results/` |
+- `src/download.sh`, `src/prepare_data.py`: baixam a Wikipédia, normalizam o texto e montam os conjuntos de treino,
+  validação e teste;
+- `src/ngram_entropy.py`, `src/compressors.sh`: baselines sem rede neural (entropia por n-gramas; gzip, xz e zstd);
+- `src/model.py`, `src/train.py`: o transformer e o treino de uma época, com prequential code length;
+- `src/evaluate.py`: entropia cruzada no teste, matriz entre línguas, calibração e loss por posição;
+- `src/coder.py`: o codificador aritmético e o teste de round trip;
+- `src/lid.py`: identificação de língua, com previsão e medida;
+- `src/mdl.py`: comprimento de descrição;
+- `src/tables.py`, `src/figures.py`, `src/make_results.sh`: geram RESULTS.md e as figuras a partir de `results/`;
+- `results/`: os resultados brutos (JSON, TSV e logs) usados nas tabelas;
+- `figures/`: as figuras usadas em RESULTS.md.
 
-A pasta `results/` guarda os resultados brutos (JSON, TSV e logs) usados nas tabelas. Os pesos dos modelos e os textos
-não estão no repositório; os scripts os reconstroem.
+Os pesos dos modelos e o texto não estão no repositório; os scripts reconstroem tudo.
 
 ## Dados e créditos
 
