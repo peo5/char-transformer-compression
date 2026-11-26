@@ -13,8 +13,8 @@ SIZES = ("0.1M", "1M", "10M")
 TEXT = {
 "dados": """\
 Usamos os dumps da Wikipédia de 1º de novembro de 2023 publicados no Hugging Face (`wikimedia/wikipedia`). Do
-português (`20231101.pt`), usamos os 6 arquivos Parquet; do inglês (`20231101.en`), os arquivos 0, 8, 16, 24, 32 e 40
-de 41.
+português (`20231101.pt`) entram os 6 arquivos Parquet, e do inglês (`20231101.en`) entram os arquivos 0, 8, 16, 24,
+32 e 40 de 41.
 
 A normalização perde informação de propósito, para que as duas línguas usem o mesmo alfabeto. Aplicamos a
 normalização Unicode NFKD, que separa cada letra do seu acento, e jogamos os acentos fora (assim "ç" vira "c").
@@ -22,57 +22,59 @@ Depois passamos tudo para minúsculas, trocamos aspas curvas e « » por `"` ou 
 qualquer caractere fora de a–z, 0–9, espaço, quebra de linha e `. , ; : ! ? ' " - ( )`.
 
 Sobram {n_symbols} símbolos. Sem modelo nenhum, com todos os símbolos igualmente prováveis, cada caractere custaria
-log2({n_symbols}) ≈ 5,61 bits. Esse é o teto de referência para todos os números abaixo.
+log2({n_symbols}) ≈ 5,61 bits, e esse é o teto de referência para todos os números abaixo.
 
 No texto final, cada linha é um parágrafo, e uma linha vazia separa um artigo do outro. Descartamos os artigos com
-menos de {min_chars} caracteres depois da normalização: em geral, são stubs ou artigos criados por bots. Também
-descartamos duplicatas exatas e quase-duplicatas, ou seja, artigos que só diferem nos dígitos.
+menos de {min_chars} caracteres depois da normalização, que em geral são stubs ou artigos criados por bots. Também
+descartamos duplicatas exatas e quase-duplicatas, isto é, artigos que só diferem nos dígitos.
 
 Para dividir o corpus, ordenamos os artigos pelo hash MD5 de "língua:id" e os distribuímos, nessa ordem, para teste,
-validação e treino. Assim, nenhum artigo aparece em dois conjuntos, e o treino é uma amostra aleatória do que
-sobrou. Cada conjunto tem exatamente o mesmo número de caracteres nas duas línguas; para isso, cortamos o último
+validação e treino. Assim nenhum artigo aparece em dois conjuntos, e o treino é uma amostra aleatória do que
+sobrou. Cada conjunto tem exatamente o mesmo número de caracteres nas duas línguas, e para isso cortamos o último
 artigo de cada um.""",
 
 "referencias": """\
-**Entropia condicional por tamanho de contexto** (*entropy ladder*; `ngram_entropy.py`, `results/ngram.json`). A
-pergunta aqui é: quanto custa o próximo caractere se conhecemos os k anteriores? Contamos n-gramas (sequências de n
-caracteres) nos primeiros N caracteres do treino, com N = 10M e N = 100M, e calculamos
-H(X_n | k caracteres anteriores) = H((k+1)-gramas) − H(k-gramas).
+A primeira referência é a entropia condicional por tamanho de contexto, que chamamos de *entropy ladder*
+(`ngram_entropy.py`, `results/ngram.json`). Ela responde quanto custa o próximo caractere quando conhecemos os k
+anteriores. Contamos n-gramas (sequências de n caracteres) nos primeiros N caracteres do treino, com N = 10M e
+N = 100M, e calculamos H(X_n | k caracteres anteriores) = H((k+1)-gramas) − H(k-gramas).
 
-Essa é a estimativa plug-in: ela usa as frequências observadas como se fossem as probabilidades verdadeiras. Quando
+Essa é a estimativa plug-in, que usa as frequências observadas como se fossem as probabilidades verdadeiras. Quando
 há muitos contextos diferentes em comparação com N, a maioria aparece poucas vezes, e a estimativa fica baixa
 demais. Comparar N = 10M com N = 100M mostra a partir de qual k isso começa a acontecer.
 
-**Compressores** (`compressors.sh`, `results/compressors.tsv`). Comprimimos os arquivos de teste normalizados (10 MB
-por língua) com gzip, xz e zstd. Se um arquivo de N caracteres vira B bytes, o custo é 8B/N bpc.""",
+A segunda referência são os compressores de uso geral (`compressors.sh`, `results/compressors.tsv`). Comprimimos os
+arquivos de teste normalizados (10 MB por língua) com gzip, xz e zstd. Se um arquivo de N caracteres vira B bytes, o
+custo é 8B/N bpc.""",
 
 "modelos": """\
 O modelo é um transformer decoder-only pequeno, escrito do zero em PyTorch. Cada token é um caractere, e o contexto
-tem 256 caracteres. Treinamos três tamanhos por língua: cerca de 0,1M, 1M e 10M de parâmetros.
+tem 256 caracteres. Treinamos três tamanhos por língua, com cerca de 0,1M, 1M e 10M de parâmetros.
 
-Cada modelo treina por uma única época. Cada trecho de 256 caracteres do corpus de treino (400M de caracteres)
-aparece uma vez, em ordem aleatória (seed 0). Usamos batches de 64 trechos, AdamW, learning rate com warmup e cosine
-decay, e bf16.
+Cada modelo treina por uma única época, então cada trecho de 256 caracteres do corpus de treino (400M de
+caracteres) aparece uma vez, em ordem aleatória (seed 0). Usamos batches de 64 trechos, AdamW, learning rate com
+warmup e cosine decay, e bf16.
 
-**Prequential code length.** Antes de atualizar os pesos com um batch, medimos a loss do modelo nesse batch, que ele
-ainda não viu. Somando essas losses no treino inteiro, temos o tamanho de um código para os dados de treino que não
-paga nada pelos pesos. Isso vale porque um decodificador que conhece a seed e a receita de treino consegue refazer
-as mesmas atualizações.
+Durante o treino também medimos o prequential code length. Antes de atualizar os pesos com um batch, calculamos a
+loss do modelo nesse batch, que ele ainda não viu. Somando essas losses no treino inteiro, temos o tamanho de um
+código para os dados de treino que não paga nada pelos pesos. Isso vale porque um decodificador que conhece a seed
+e a receita de treino consegue refazer as mesmas atualizações.
 
-A validação usa os 5M de caracteres de val.txt. As curvas de validação da figura usam só os primeiros 0,5M; os
+A validação usa os 5M de caracteres de val.txt. As curvas de validação da figura usam só os primeiros 0,5M, e os
 números finais da tabela usam os 5M.""",
 
 "teste": """\
 Cortamos cada arquivo de teste (10M de caracteres) em trechos de 256 caracteres, sem sobreposição. Cada trecho é
-avaliado sozinho, sem o texto que vem antes dele: a posição i prevê o caractere i+1 a partir dos caracteres 0..i.
+avaliado sozinho, sem o texto que vem antes dele, e a posição i prevê o caractere i+1 a partir dos caracteres 0..i.
 Aqui tudo roda em float32, sem mixed precision.
 
-**Calibração.** O modelo também diz o quanto está incerto: é a entropia da distribuição que ele prevê. Comparamos a
-média dessa entropia com a entropia cruzada medida de fato. Quando as duas coincidem, a incerteza que o modelo
-declara é a incerteza real. Quando a entropia prevista é menor, o modelo está confiante demais.
+O modelo também diz o quanto está incerto, por meio da entropia da distribuição que ele prevê. Para medir a
+calibração, comparamos a média dessa entropia com a entropia cruzada medida de fato. Quando as duas coincidem, a
+incerteza que o modelo declara é a incerteza real. Quando a entropia prevista é menor, o modelo está confiante
+demais.
 
-**Loss por posição.** Calculamos a entropia cruzada média em cada posição do trecho. Isso mostra quanto o modelo
-ganha a cada caractere a mais de contexto.""",
+Por fim, calculamos a entropia cruzada média em cada posição do trecho. Essa loss por posição mostra quanto o
+modelo ganha a cada caractere a mais de contexto.""",
 
 "codificacao": """\
 Implementamos nosso próprio codificador aritmético, com inteiros de 32 bits, no esquema clássico de Witten, Neal e
@@ -80,7 +82,7 @@ Cleary. A cada passo, o modelo dá uma distribuição sobre os 49 símbolos, e o
 no caractere que de fato aparece.
 
 O ponto delicado é que o codificador e o decodificador precisam ver exatamente as mesmas probabilidades. Uma
-diferença no último bit de um float já corrompe todo o resto do arquivo. Por isso, os dois rodam o mesmo laço, em
+diferença no último bit de um float já corrompe todo o resto do arquivo. Por isso os dois rodam o mesmo laço, em
 float32 e com algoritmos determinísticos. As probabilidades viram frequências inteiras que somam 2^16, com
 f = 1 + piso(p·(2^16 − 49)), e a sobra vai para o símbolo mais provável.
 
@@ -92,14 +94,14 @@ O tamanho ideal é a soma Σ −log2 q_quantizada. O tamanho real é o tamanho d
 bytes (8 bytes mais 4 bytes por stream). A diferença entre os dois é o overhead do codificador.
 
 Aqui o contexto vem de uma janela deslizante (até 255 caracteres antes), e não de trechos independentes como na
-seção 4. Por isso, os números desta seção não são exatamente iguais aos de lá.""",
+seção 4. Por isso os números desta seção não são exatamente iguais aos de lá.""",
 
 "matriz": """\
 Esta seção reorganiza os números da seção 4 em uma matriz. Cada texto de teste, com o mesmo tamanho nas duas
 línguas, é codificado pelo modelo da própria língua e pelo modelo da outra. Por exemplo, "en pelo pt" é o texto em
 inglês codificado pelo modelo treinado em português.
 
-A intuição vem da identidade H(P,Q) = H(P) + KL(P‖Q): usar o modelo errado custa bits extras. O excesso
+A intuição vem da identidade H(P,Q) = H(P) + KL(P‖Q), que diz que usar o modelo errado custa bits extras. O excesso
 CE(en | modelo pt) − CE(en | modelo en), em que CE é a entropia cruzada, estima KL(p_en‖q_pt) − KL(p_en‖q_en). Aqui
 p_en é a distribuição verdadeira do inglês e q é a distribuição de cada modelo. Mostramos as duas direções porque a
 divergência KL não é simétrica.""",
@@ -110,39 +112,38 @@ calculamos para cada caractere a razão de log-verossimilhança L_i = log2 q_A(x
 língua. A regra classifica o trecho como A quando Σ L_i > 0, ou seja, quando o modelo de A comprime o trecho melhor.
 
 Primeiro fazemos uma previsão. Na primeira metade dos trechos de teste, medimos a média D e o desvio padrão de L_i, e
-estimamos quantos caracteres n são necessários para errar com probabilidade eps:
-
-- **lema de Stein:** n ≈ log2(1/eps)/D;
-- **teorema central do limite (TCL):** tratando os L_i como independentes, n ≈ (z_eps · desvio / D)², em que z_eps é
-  o quantil da normal padrão para 1 − eps.
+estimamos quantos caracteres n são necessários para errar com probabilidade eps. O lema de Stein dá
+n ≈ log2(1/eps)/D. O teorema central do limite (TCL), tratando os L_i como independentes, dá
+n ≈ (z_eps · desvio / D)², em que z_eps é o quantil da normal padrão para 1 − eps.
 
 Depois medimos. Na segunda metade, que é texto diferente, calculamos o erro real da regra para cada n de 1 a 256,
-usando os primeiros n caracteres de cada trecho. O "n medido" é o menor n com erro ≤ eps; "—" quer dizer que esse
+usando os primeiros n caracteres de cada trecho. O "n medido" é o menor n com erro ≤ eps, e "—" quer dizer que esse
 erro não foi alcançado em 256 caracteres.
 
-Olhamos os trechos de teste com mais erros (modelos de 0,1M). No texto em português, são listas de anos sem palavras
-("1834 1835 1836 ..."). No texto em inglês, são listas de títulos de livros em português dentro de artigos da
-Wikipédia em inglês.""",
+Olhamos também os trechos de teste com mais erros (modelos de 0,1M). No texto em português, eles são listas de anos
+sem palavras ("1834 1835 1836 ..."). No texto em inglês, são listas de títulos de livros em português dentro de
+artigos da Wikipédia em inglês.""",
 
 "mdl": """\
-Uma objeção natural é que o modelo também precisa ser enviado para que o arquivo possa ser decodificado. Por isso,
-contamos os bpc de cada modelo de quatro maneiras, com cada peso custando 32 bits:
+Uma objeção natural é que o modelo também precisa ser enviado para que o arquivo possa ser decodificado. Por isso
+contamos os bpc de cada modelo de quatro maneiras, sempre com cada peso custando 32 bits.
 
-- **Modelo compartilhado:** a entropia cruzada no teste. É o custo quando quem recebe o arquivo já tem o modelo, como
-  acontece com um dicionário.
-- **Two-part code, teste:** (32 × parâmetros + 10M × bpc no teste) / 10M. É o custo de enviar os pesos junto com o
-  arquivo de teste de 10 MB.
-- **Two-part code, treino:** a mesma conta para os 400M caracteres de treino. Como loss no treino, usamos a loss de
-  validação final, já que o modelo viu cada caractere do treino uma única vez.
-- **Prequential code length:** o valor da seção 3, que não paga nada pelos pesos.
+Com o modelo compartilhado, o custo é a entropia cruzada no teste, como se quem recebe o arquivo já tivesse o modelo,
+do mesmo jeito que acontece com um dicionário. No two-part code de teste, enviamos os pesos junto com o arquivo de
+teste de 10 MB, e o custo é (32 × parâmetros + 10M × bpc no teste) / 10M.
 
-Como referência, citamos sem executar o recorde do Hutter Prize: 110.793.128 bytes para o enwik9 (fx2-cmix, setembro
-de 2024), ou 0,886 bits por byte de XML bruto, já contando o descompressor. Esse número não é comparável com os
-nossos, porque o texto, o alfabeto e o tamanho são outros.""",
+O two-part code de treino faz a mesma conta para os 400M caracteres de treino. Como loss no treino usamos a loss de
+validação final, já que o modelo viu cada caractere do treino uma única vez. O prequential code length, por fim, é o
+valor da seção 3, que não paga nada pelos pesos.
+
+Como referência, citamos sem executar o recorde do Hutter Prize, que é de 110.793.128 bytes para o enwik9 (fx2-cmix,
+setembro de 2024), ou 0,886 bits por byte de XML bruto, já contando o descompressor. Esse número não é comparável
+com os nossos, porque o texto, o alfabeto e o tamanho são outros.""",
 
 "text8": """\
-O text8 é um benchmark clássico: os primeiros 10^8 caracteres do enwik9 (um trecho da Wikipédia em inglês), limpos
-para conter só a–z e espaço. A divisão padrão usa 90M de caracteres para treino, 5M para validação e 5M para teste.
+O text8 é um benchmark clássico, formado pelos primeiros 10^8 caracteres do enwik9 (um trecho da Wikipédia em
+inglês) limpos para conter só a–z e espaço. A divisão padrão usa 90M de caracteres para treino, 5M para validação e
+5M para teste.
 
 Treinamos o modelo de 1M de parâmetros por uma época nos 90M de treino, com a mesma receita dos outros modelos. O
 número "teste" abaixo é a avaliação final nos 5M de teste, guardados como val.txt.
@@ -244,7 +245,7 @@ def main():
     table(["tamanho", "pt pelo pt", "en pelo en", "en pelo pt", "pt pelo en",
            "excesso no texto en (modelo pt − modelo en)", "excesso no texto pt (modelo en − modelo pt)"], rows)
 
-    section("7. Identificação de língua: uma previsão testada (`lid.py`, `runs/lid.json`)",
+    section("7. Identificação de língua como previsão testada (`lid.py`, `runs/lid.json`)",
             TEXT["lid"])
     table(["tamanho", "texto", "D (bpc)", "desvio", "eps", "n previsto, Stein", "n previsto, TCL",
            "n medido", "erro medido com n = 256"],
@@ -261,7 +262,7 @@ def main():
             num(mdl[m]["two_part_train"]), num(mdl[m]["prequential"])] for m in models if m in mdl])
 
     if text8:
-        section("9. Verificação de sanidade: text8 (`text8_data.sh`, `results/runs_text8/text8_1M.log.json`)",
+        section("9. Verificação de sanidade com o text8 (`text8_data.sh`, `results/runs_text8/text8_1M.log.json`)",
                 TEXT["text8"])
         table(["modelo", "parâmetros", "prequential code length, bpc (90M de treino)", "teste, bpc (5M)",
                "minutos"],
